@@ -167,19 +167,42 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 27 . Cách bắt lỗi ngoại lệ bằng try catch trong lập trình Java | Phần 1 
-  try
+  // try
+  // {
+  //   System.out.println("Nhap a : ");
+  //   int a = sc.nextInt();
+  // }
+  // catch(Exception e)
+  // {
+  //   System.out.println("Du lieu nhap vao khong la so");
+  // }
+  // finally
+  // {
+  //   System.out.println("Finally!");
+  // }
+  // System.out.println("Cau lenh nay van duoc thuc thi ");
+
+
+  // ------------------------------------------------------------------------------------
+  // Java 27a. Giới thiệu về mảng trong lập trình Java | Phần 1
+  double mang1[];
+  //  cách 2 : double[] mang1;
+  System.out.println("Nhap so luong phan tu cua mang : ");
+  int n = sc.nextInt();
+  mang1 = new double[n];
+
+  // Nhập mảng
+  for(int i = 0 ; i < mang1.length ; i++)
   {
-    System.out.println("Nhap a : ");
-    int a = sc.nextInt();
+    System.out.println("Nhap phan tu thu " + i + " : ");
+    mang1[i] = sc.nextDouble();
   }
-  catch(Exception e)
+  
+  // Xuất mảng
+  for(int i = 0 ; i < mang1.length ; i++)
   {
-    System.out.println("Du lieu nhap vao khong la so");
+    System.out.println("phan tu thu " + i + " : " + (int)mang1[i]);
   }
-  finally
-  {
-    System.out.println("Finally!");
-  }
-  System.out.println("Cau lenh nay van duoc thuc thi ");
+
 }
 }
