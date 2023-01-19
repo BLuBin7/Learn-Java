@@ -32,7 +32,8 @@ class Member
 
 public class Team
 {
-        Member member;
+        Member member ;
+        
         public Team(Member member) 
         {
             this.member = member;
