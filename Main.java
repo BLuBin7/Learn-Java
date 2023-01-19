@@ -185,24 +185,29 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 27a. Giới thiệu về mảng trong lập trình Java | Phần 1
-  double mang1[];
-  //  cách 2 : double[] mang1;
-  System.out.println("Nhap so luong phan tu cua mang : ");
-  int n = sc.nextInt();
-  mang1 = new double[n];
+  // double mang1[];
+  // //  cách 2 : double[] mang1;
+  // System.out.println("Nhap so luong phan tu cua mang : ");
+  // int n = sc.nextInt();
+  // mang1 = new double[n];
 
-  // Nhập mảng
-  for(int i = 0 ; i < mang1.length ; i++)
-  {
-    System.out.println("Nhap phan tu thu " + i + " : ");
-    mang1[i] = sc.nextDouble();
-  }
-  
-  // Xuất mảng
-  for(int i = 0 ; i < mang1.length ; i++)
-  {
-    System.out.println("phan tu thu " + i + " : " + (int)mang1[i]);
-  }
+  // // Nhập mảng
+  // for(int i = 0 ; i < mang1.length ; i++)
+  // {
+  //   System.out.println("Nhap phan tu thu " + i + " : ");
+  //   mang1[i] = sc.nextDouble();
+  // }
+
+  // // Xuất mảng
+  // for(int i = 0 ; i < mang1.length ; i++)
+  // {
+  //   System.out.println("phan tu thu " + i + " : " + (int)mang1[i]);
+  // }
+
+
+  // ------------------------------------------------------------------------------------
+  // Java 30. Cách xây dựng lớp và phương thức khởi tạo Constructor | Phần 2
+
 
 }
 }
