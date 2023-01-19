@@ -44,15 +44,15 @@ public class Team
         Member myMember = new Member("Aurieel", "light", 10, 1);
         Team myTeam = new Team(myMember);
         // cách 1
-        // System.out.println(myTeam.member.getName());
-        // System.out.println(myTeam.member.getType());
-        // System.out.println(myTeam.member.getLevel());
-        // System.out.println(myTeam.member.getRank());
+        System.out.println(myTeam.member.getName());
+        System.out.println(myTeam.member.getType());
+        System.out.println(myTeam.member.getLevel());
+        System.out.println(myTeam.member.getRank());
         // cách 2
-        System.out.println(myMember.getName());
-        System.out.println(myMember.getType());
-        System.out.println(myMember.getLevel());
-        System.out.println(myMember.getRank());
+        // System.out.println(myMember.getName());
+        // System.out.println(myMember.getType());
+        // System.out.println(myMember.getLevel());
+        // System.out.println(myMember.getRank());
     }
 }
     

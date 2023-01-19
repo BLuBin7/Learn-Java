@@ -207,7 +207,40 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 30. Cách xây dựng lớp và phương thức khởi tạo Constructor | Phần 2
-
-
+  int d;
+  Java30 gg= new Java30(19 , 1 , 2023);
+  date.printDay();
+  date.printMonth();
+  date.printYear();
 }
+// Java 30
+  public class Java30
+  {
+    //  bước 1 : khai báo thuộc tính
+    private  int day;
+    private int month;
+    private int year;
+
+    // bước 2 : khai báo phương thức (method) hoặc còn gọi là hàm(tên hàm giống tên class)
+    public Java30(int d, int m , int y )
+    {
+      // tạo 1 đối tượng mới
+      this.day = d;
+      this.month = m;
+      this.year = y;
+
+    }
+    public void printDay()
+    {
+      System.out.println("Ngay : " + this.day);
+    }
+    public void printMonth()
+    {
+      System.out.println("Thang: " + this.month);
+    }
+    public void printYear()
+    {
+      System.out.println("Nam: " + this.year);
+    }
+  }
 }
