@@ -215,10 +215,14 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 31. Hiểu rõ về phương thức trong lập trình Java | Phần 2
-  HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen",100.000,1.5);
+  HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen" , 100.000 , 1.5);
+  HoaDonCaPhe hd2 = new HoaDonCaPhe("Trung Nguyen" , 100.000 , 5.5);
   System.out.println("Tong tien :" + hd.tinhTongTien());
   System.out.println("KiemtraKhoiLuong > 2kg :" + hd.KiemTraKhoiLuong(2));
   System.out.println("Kiem tra gia tien co > 500k khong : " + hd.KiemTraGiaTienLonHon500k());
+  System.out.println("So tien sau khi giam gia cua khach hang 1 : " + hd.GiamGia(5));
+  System.out.println("So tien sau khi giam gia cua khach hang 2 : " + hd2.GiamGia(5));
+
 }
 
 }
@@ -284,7 +288,9 @@ public class Main
     {
       return this.giatien1kg * this.KhoiLuong;
     }
+    
     public boolean KiemTraKhoiLuong(double kl)
+    //  truyền "kl" này là nhập từ bàn phím
     {
     // cách 1
     //   if(this.KhoiLuong > kl)
@@ -303,5 +309,18 @@ public class Main
     public boolean KiemTraGiaTienLonHon500k()
     {
       return this.tinhTongTien() > 500.000;
+    }
+    public double GiamGia(double x)
+    {
+      if(this.KiemTraGiaTienLonHon500k() == true)
+      {
+        System.out.println("Hoa Don cua quy khach tren 500k nen duoc giam " + x +"%");
+        return this.tinhTongTien() - (this.tinhTongTien() * x/100);
+      }
+      else
+      {
+        System.out.println("Rat tiec . Hoa Don cua quy khach duoi 500k nen khong duoc giam gia");
+        return this.tinhTongTien();
+      }
     }
   }
