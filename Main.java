@@ -215,7 +215,8 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 31. Hiểu rõ về phương thức trong lập trình Java | Phần 2
-  
+  HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen",100.000,1.5);
+   System.out.println("Tong tien :" + hd.tinhTongTien());
 }
 
 }
@@ -232,14 +233,18 @@ public class Main
     private int year;
 
     // bước 2 : khai báo phương thức (method) hoặc còn gọi là hàm(tên hàm giống tên class)
+    // Constructor (bắt buộc)
     public Java30(int d, int m , int y )
     {
       // tạo 1 đối tượng mới
+      //  this là lấy thông tin nội bộ bên trong lớp này ra
       this.day = d;
       this.month = m;
       this.year = y;
 
     }
+
+    // Operation
     // nếu phương thức không trả về bất cứ thông tin gì thì dùng "void".
     // nếu có trả thì dùng double , int ,...
     public void printDay()
@@ -253,5 +258,28 @@ public class Main
     public void printYear()
     {
       System.out.println("Nam: " + this.year);
+    }
+  }
+
+
+// ------------------------------------------------------------------------------------
+  // Java 31
+  class HoaDonCaPhe
+  {
+    // Attribute
+    private String tenloaiCaPhe ;
+    private double giatien1kg , KhoiLuong;
+
+    // Constructor
+    public HoaDonCaPhe(String ten , double gia ,double KL)
+    {
+      this.tenloaiCaPhe = ten;
+      this.giatien1kg = gia;
+      this.KhoiLuong = KL;
+    }
+    // Operation
+    public double tinhTongTien()
+    {
+        return this.giatien1kg * this.KhoiLuong;
     }
   }
