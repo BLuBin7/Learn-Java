@@ -215,13 +215,21 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 31. Hiểu rõ về phương thức trong lập trình Java | Phần 2
-  HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen" , 100.000 , 1.5);
-  HoaDonCaPhe hd2 = new HoaDonCaPhe("Trung Nguyen" , 100.000 , 5.5);
-  System.out.println("Tong tien :" + hd.tinhTongTien());
-  System.out.println("KiemtraKhoiLuong > 2kg :" + hd.KiemTraKhoiLuong(2));
-  System.out.println("Kiem tra gia tien co > 500k khong : " + hd.KiemTraGiaTienLonHon500k());
-  System.out.println("So tien sau khi giam gia cua khach hang 1 : " + hd.GiamGia(5));
-  System.out.println("So tien sau khi giam gia cua khach hang 2 : " + hd2.GiamGia(5));
+  // HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen" , 100.000 , 1.5);
+  // HoaDonCaPhe hd2 = new HoaDonCaPhe("Trung Nguyen" , 100.000 , 5.5);
+  // System.out.println("Tong tien :" + hd.tinhTongTien());
+  // System.out.println("KiemtraKhoiLuong > 2kg :" + hd.KiemTraKhoiLuong(2));
+  // System.out.println("Kiem tra gia tien co > 500k khong : " + hd.KiemTraGiaTienLonHon500k());
+  // System.out.println("So tien sau khi giam gia cua khach hang 1 : " + hd.GiamGia(5));
+  // System.out.println("So tien sau khi giam gia cua khach hang 2 : " + hd2.GiamGia(5));
+
+
+  // ------------------------------------------------------------------------------------
+  // Java 32. Hiểu rõ phương thức GET và SET | Phần 2
+  MyDate md = new MyDate(20 , 1, 2023);
+  System.out.println("Ngay : " + md.GetDay());
+  md.SetDay(1);
+  System.out.println("Ngay sau khi doi : " + md.GetDay());
 
 }
 
@@ -251,7 +259,7 @@ public class Main
     }
 
     // Operation
-    // nếu phương thức không trả về bất cứ thông tin gì thì dùng "void".
+    // nếu phương thức không trả về bất cứ thông tin gì thì dùng "void".. trả về ở đây là "return" (không phải dữ liệu trong ngoặc (..) )
     // nếu có trả thì dùng double , int ,...
     public void printDay()
     {
@@ -268,15 +276,17 @@ public class Main
   }
 
 
+
 // ------------------------------------------------------------------------------------
-  // Java 31
+// Java 31
   class HoaDonCaPhe
   {
     // Attribute
     private String tenloaiCaPhe ;
     private double giatien1kg , KhoiLuong;
 
-    // Constructor
+    // Constructor 
+    // Lưu ý : Constructor không có kiểu dữ liệu trả về
     public HoaDonCaPhe(String ten , double gia ,double KL)
     {
       this.tenloaiCaPhe = ten;
@@ -324,3 +334,78 @@ public class Main
       }
     }
   }
+
+// ------------------------------------------------------------------------------------
+// Java 32
+class MyDate
+  {
+    // Attribute
+    private int day , month , year;
+
+    // Constructor
+    public MyDate(int d , int m , int y)
+    { 
+      if(d >= 1 && d <= 31)
+      {
+        this.day = d;
+      }
+      else
+      {
+        this.day = 1;
+      }
+      if(m>=1 && m<=12)
+      {
+        this.month = m;
+      }
+      else 
+      {
+        this.month = 1;
+      }
+      if(y >=1900 && y<=2023)
+      {
+        this.year = y;
+      }
+      else
+      {
+        this.year = 2000;
+      }
+    }
+
+    // Operation
+    public int GetDay()
+    {
+      return this.day;
+    }
+    public void SetDay(int d)
+    {
+      if(d >=1&&d<=31)
+      {
+        this.day = d;
+      }
+    }
+
+    public int GetMonth()
+    {
+      return this.month;
+    }
+    public void SetMonth(int m)
+    {
+      if(m>=1 &&m<=12)
+      {
+        this.month = m;
+      }
+    }
+
+    public int  GetYear()
+    {
+      return this.year;
+    }
+    public void SetYear(int y)
+    {
+      if(y>=1900 &&y<=2023)
+      {
+        this.year = y;
+      }
+    }
+  }
+
