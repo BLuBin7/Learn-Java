@@ -218,6 +218,7 @@ public class Main
   HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen",100.000,1.5);
   System.out.println("Tong tien :" + hd.tinhTongTien());
   System.out.println("KiemtraKhoiLuong > 2kg :" + hd.KiemTraKhoiLuong(2));
+  System.out.println("Kiem tra gia tien co > 500k khong : " + hd.KiemTraGiaTienLonHon500k());
 }
 
 }
@@ -298,5 +299,9 @@ public class Main
     // cách 2
     // thật ra nguyên cụm this.KhoiLuong mặc định đã trả về "true" hoặc "false" rồi
       return this.KhoiLuong > kl;
+    }
+    public boolean KiemTraGiaTienLonHon500k()
+    {
+      return this.tinhTongTien() > 500.000;
     }
   }
