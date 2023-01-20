@@ -207,13 +207,20 @@ public class Main
 
   // ------------------------------------------------------------------------------------
   // Java 30. Cách xây dựng lớp và phương thức khởi tạo Constructor | Phần 2
-  Java30 date = new Java30(19 , 1 , 2023);
-  date.printDay();
-  date.printMonth();
-  date.printYear();
+  // Java30 date = new Java30(19 , 1 , 2023);
+  // date.printDay();
+  // date.printMonth();
+  // date.printYear();
+
+
+  // ------------------------------------------------------------------------------------
+  // Java 31. Hiểu rõ về phương thức trong lập trình Java | Phần 2
+  
 }
 
 }
+
+// ------------------------------------------------------------------------------------
 // Java 30
 // nếu mà là public class thì phải đặt cái class thành 1 file riêng biệt
 //  còn nếu là class thôi thì ko cần đặt thành 1 file riêng biệt
@@ -233,6 +240,8 @@ public class Main
       this.year = y;
 
     }
+    // nếu phương thức không trả về bất cứ thông tin gì thì dùng "void".
+    // nếu có trả thì dùng double , int ,...
     public void printDay()
     {
       System.out.println("Ngay : " + this.day);
