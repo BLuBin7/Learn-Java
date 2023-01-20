@@ -216,7 +216,8 @@ public class Main
   // ------------------------------------------------------------------------------------
   // Java 31. Hiểu rõ về phương thức trong lập trình Java | Phần 2
   HoaDonCaPhe hd = new HoaDonCaPhe("Trung Nguyen",100.000,1.5);
-   System.out.println("Tong tien :" + hd.tinhTongTien());
+  System.out.println("Tong tien :" + hd.tinhTongTien());
+  System.out.println("KiemtraKhoiLuong > 2kg :" + hd.KiemTraKhoiLuong(2));
 }
 
 }
@@ -280,6 +281,22 @@ public class Main
     // Operation
     public double tinhTongTien()
     {
-        return this.giatien1kg * this.KhoiLuong;
+      return this.giatien1kg * this.KhoiLuong;
+    }
+    public boolean KiemTraKhoiLuong(double kl)
+    {
+    // cách 1
+    //   if(this.KhoiLuong > kl)
+    //   {
+    //     return true;
+    //   }
+    //   else
+    //   {
+    //     return false;
+    //   }
+    // 
+    // cách 2
+    // thật ra nguyên cụm this.KhoiLuong mặc định đã trả về "true" hoặc "false" rồi
+      return this.KhoiLuong > kl;
     }
   }
