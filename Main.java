@@ -241,14 +241,25 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 34 . Hiểu rõ phương thức so sánh equals và hascode | Phần 2
-    Java34 md1 = new Java34(21 , 1 , 2023);
-    Java34 md2 = new Java34(22 , 1 , 2023);
-    Java34 md3 = new Java34(21 ,1 , 2023);
-    System.out.println("md1 :" + md1.toString());
-    System.out.println("md2 :" + md2.toString());
-    System.out.println("md3 :" + md3.toString());
-    System.out.println("So sanh md1 va md2 : " + md1.equals(md2));
-    System.out.println("So sanh md1 va md3 : " + md1.equals(md3));
+    // Java34 md1 = new Java34(21 , 1 , 2023);
+    // Java34 md2 = new Java34(22 , 1 , 2023);
+    // Java34 md3 = new Java34(21 ,1 , 2023);
+    // System.out.println("md1 :" + md1.toString());
+    // System.out.println("md2 :" + md2.toString());
+    // System.out.println("md3 :" + md3.toString());
+    // System.out.println("So sanh md1 va md2 : " + md1.equals(md2));
+    // System.out.println("So sanh md1 va md3 : " + md1.equals(md3));
+
+
+    // ------------------------------------------------------------------------------------
+    // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
+    Sach nhapmon = new Sach(2018 , "nhapmon" , 86.000);
+    System.out.println("Ten sach la : " + nhapmon.toString());
+  
+
+    // ------------------------------------------------------------------------------------
+    // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
+
   }
 }
 
@@ -478,7 +489,7 @@ class Java33
 // Cái này chỉ so sánh được những con số hay kiểu dữ liệu nguyên thủy như INT , LONG , DOUBLE , BOOLEAN thôi
 // còn so sánh 2 ĐỐI TƯỢNG không sử dụng được cái này , mà phải so sánh thông qua PHƯƠNG THỨC (OPERATION)
 class Java34
-{
+ {
   // Attribute
   private int day ,month,year;
 
@@ -549,4 +560,31 @@ class Java34
   {
     return this.day + "/" + this.month +"/" +this.year;
   }
+ }
+// ------------------------------------------------------------------------------------
+// Java 35
+class Sach
+{
+  // Attribute
+  private int namxuatban;
+  private String tenSach;
+  private double giaban;
+
+  // Constructor
+
+  public Sach (int nam, String ten, double gia)
+  {
+    this.namxuatban = nam;
+    this.tenSach = ten;
+    this.giaban = gia;
+  }
+
+  // Operation
+
+  public String toString()
+  {
+    return this.tenSach;
+  }
+
+
 }
