@@ -253,15 +253,14 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
-    Sach nhapmon = new Sach(2020 , "nhapmon" , 86.000);
+    Sach nhapmon = new Sach(2020 , "nhap mon lap trinh" , 86.000);
     Sach DSA = new Sach(2021,"Data Structures and Agorithms",90.000);
     System.out.println("Ten sach 1 la : " + nhapmon.toString());
     System.out.println("Ten sach 2 la : " + DSA.toString());
     System.out.println("Kiem tra 2 cuon sach co cung nam khong : " +nhapmon.equals(DSA));
+    System.out.println("Gia sach nhap mon lap trinh sau khi giam 5% : " + nhapmon.GiamGia(5));
 
-
-    // ------------------------------------------------------------------------------------
-    // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
+    
 
   }
 }
@@ -613,5 +612,8 @@ class Sach
       return true;
     }
   }
-
+  public double GiamGia(double x)
+  {
+    return this.giaban - (this.giaban)*x/100;
+  }
 }
