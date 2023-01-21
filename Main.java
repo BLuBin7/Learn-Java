@@ -617,3 +617,22 @@ class Sach
     return this.giaban - (this.giaban)*x/100;
   }
 }
+class TacGia
+{
+  // Attribute
+  private String tentacgia;
+  private double day, double month , double year ;
+  // Constructor
+  public TacGia(String ten, double d, double m , double y)
+  {
+    this.tentacgia = ten;
+    this.day = d;
+    this.month = m;
+    this.year = y;
+  }
+  // Operation
+  public String toString()
+  {
+    return this.day + "/" + this.month + "/" + this.year;
+  }
+}
