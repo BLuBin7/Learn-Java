@@ -235,8 +235,20 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 33. Hiểu rõ phương thức toString trong lập trình Java
-    Java33 md = new Java33(21 ,1,2023);
-    System.out.println(md.toString());
+    // Java33 md = new Java33(21 ,1,2023);
+    // System.out.println(md.toString());
+
+
+    // ------------------------------------------------------------------------------------
+    // Java 34 . Hiểu rõ phương thức so sánh equals và hascode | Phần 2
+    Java34 md1 = new Java34(21 , 1 , 2023);
+    Java34 md2 = new Java34(22 , 1 , 2023);
+    Java34 md3 = new Java34(21 ,1 , 2023);
+    System.out.println("md1 :" + md1.toString());
+    System.out.println("md2 :" + md2.toString());
+    System.out.println("md3 :" + md3.toString());
+    System.out.println("So sanh md1 va md2 : " + md1.equals(md2));
+    System.out.println("So sanh md1 va md3 : " + md1.equals(md3));
   }
 }
 
@@ -420,7 +432,7 @@ class MyDate
 class Java33
   {
     // Attribute
-    public int day , month , year;
+    private int day , month , year;
 
 
     // Contructor
@@ -460,4 +472,81 @@ class Java33
       return this.day + "/" + this.month +"/" +this.year;
     }
   }
+// ------------------------------------------------------------------------------------
+// Java 34
+// Lưu ý : tại sao lại có bài này , chỉ đơn giản là so sánh thì dùng TOÁN TỬ ĐIỀU KIỆN như bình thường thôi 
+// Cái này chỉ so sánh được những con số hay kiểu dữ liệu nguyên thủy như INT , LONG , DOUBLE , BOOLEAN thôi
+// còn so sánh 2 ĐỐI TƯỢNG không sử dụng được cái này , mà phải so sánh thông qua PHƯƠNG THỨC (OPERATION)
+class Java34
+{
+  // Attribute
+  private int day ,month,year;
 
+  // Constructor
+  public  Java34(int day , int month , int year )
+    {
+      if(day >=1 &&day <=31)
+      {
+        this.day = day ;
+      }
+      else 
+      {
+        this.day = 1;
+      }
+      if(month >=1&&month <=12)
+      {
+        this.month = month;
+      }
+      else
+      {
+        this.month = 1;
+      }
+      if(year >=1900&&year <=2023)
+      {
+      this.year = year;
+      }
+      else
+      {
+        this.year = 2023;
+      }
+  }
+  // @Override
+  public boolean equals(Object obj)
+  {
+    if(this == obj)
+    {
+      return true;
+    }
+    if(obj == null)
+    {
+      return false;
+    }
+    if(this.getClass() != obj.getClass())
+    {
+      return false;
+    }
+    // So sánh từng dữ liệu bên trong của đối tượng (obj) được truyền vào
+    // ép kiểu dữ liệu
+    Java34 other = (Java34) obj;
+    if(this.day != other.day)
+    {
+      return false;
+    }
+    if(this.month != other.month)
+    {
+      return false;
+    }
+    if(this.year != other.year)
+    {
+      return false;
+    }
+    else 
+    {
+      return true;
+    }
+  }
+  public String toString()
+  {
+    return this.day + "/" + this.month +"/" +this.year;
+  }
+}
