@@ -253,9 +253,12 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
-    Sach nhapmon = new Sach(2018 , "nhapmon" , 86.000);
-    System.out.println("Ten sach la : " + nhapmon.toString());
-  
+    Sach nhapmon = new Sach(2020 , "nhapmon" , 86.000);
+    Sach DSA = new Sach(2021,"Data Structures and Agorithms",90.000);
+    System.out.println("Ten sach 1 la : " + nhapmon.toString());
+    System.out.println("Ten sach 2 la : " + DSA.toString());
+    System.out.println("Kiem tra 2 cuon sach co cung nam khong : " +nhapmon.equals(DSA));
+
 
     // ------------------------------------------------------------------------------------
     // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
@@ -585,6 +588,30 @@ class Sach
   {
     return this.tenSach;
   }
-
+  //Override
+  public boolean equals(Object obj)
+  {
+    if(this == obj)
+    {
+      return true;
+    }
+    if(obj == null)
+    {
+      return false;
+    }
+    if(this.getClass() != obj.getClass())
+    {
+      return false;
+    }
+    Sach other = (Sach) obj;
+    if(this.namxuatban != other.namxuatban)
+    {
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+  }
 
 }
