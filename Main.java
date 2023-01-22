@@ -640,7 +640,7 @@ class TacGia
 
 // ------------------------------------------------------------------------------------
 // Java 36. Bài tập Quản lý Bộ phim trong lập trình Java | Phần 2
-class Java36
+class Phim
   {
     // Attribute
     private String tenphim;
@@ -651,5 +651,18 @@ class Java36
     private int ngaychieu;
     private int thangchieu;
     private int namchieu;
+
+    // Contructor
+    public Phim(iString ten, int namsx , double gia , String tenhangsx , String quocgiasx,int ngaychieu,int thangchieu,int nam chieu)
+    {
+      this.tenphim = ten;
+      this.namsanxuat = nam;
+      this.giave = gia;
+      this.tenhangsanxuat = tenhangsx;
+      this.quocgiasanxuat = quocgiasx;
+      this.ngaychieu = ngaychieu;
+      this.thangchieu = thangchieu;
+      this.namchieu = namchieu;
+    }
 
   }
