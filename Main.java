@@ -263,18 +263,22 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 36. Bài tập Quản lý Bộ phim trong lập trình Java | Phần 2
-    Ngay ngay1 = new Ngay(20,12,2022);
-    Ngay ngay2 = new Ngay(22,12,2022);
+    // Ngay ngay1 = new Ngay(20,12,2022);
+    // Ngay ngay2 = new Ngay(22,12,2022);
 
-    HangSanXuat hang1 = new HangSanXuat("Marvel" , "US");
-    HangSanXuat hang2 = new HangSanXuat("Marvel" , "US");
+    // HangSanXuat hang1 = new HangSanXuat("Marvel" , "US");
+    // HangSanXuat hang2 = new HangSanXuat("Marvel" , "US");
 
-    Phim Aquaman = new Phim("Aqua Man", 2022, 100.000 , hang1 ,ngay1);
-    Phim BlackPaner2 = new Phim("Black Paner 2", 2022,120.000, hang2 ,ngay2);
-    System.out.println("Gia ve phim Aquaman la : " + Aquaman.giave());
-    System.out.println("GIa ve phim Blackpaner 2 : " + BlackPaner2.giave());
-    System.out.println("So sanh gia ve Aquaman co re hon BlackPaner2 khong : " + Aquaman.KiemTragiaverehon(BlackPaner2));
-    System.out.println("So tien sau khi khuyen mai 5% : " + Aquaman.KhuyenMai(5));
+    // Phim Aquaman = new Phim("Aqua Man", 2022, 100.000 , hang1 ,ngay1);
+    // Phim BlackPaner2 = new Phim("Black Paner 2", 2022,120.000, hang2 ,ngay2);
+    // System.out.println("Gia ve phim Aquaman la : " + Aquaman.giave());
+    // System.out.println("GIa ve phim Blackpaner 2 : " + BlackPaner2.giave());
+    // System.out.println("So sanh gia ve Aquaman co re hon BlackPaner2 khong : " + Aquaman.KiemTragiaverehon(BlackPaner2));
+    // System.out.println("So tien sau khi khuyen mai 5% : " + Aquaman.KhuyenMai(5));
+
+
+    // ------------------------------------------------------------------------------------
+    // Java 37. Bài tập Quản lý Sinh viên trong lập trình Java | Phần 2
 
   }
 }
@@ -743,3 +747,60 @@ class Ngay
       }
     }
   }
+// ------------------------------------------------------------------------------------
+// Java 37
+class SinhVien
+  {
+    // Attribute
+    private double MSSV;
+    private String HoVaTen;
+    private Ngaysinh ngaysinh;
+    private double DTB;
+    private Lop lop;
+
+    // Constructor
+    public SinhVien(double ms, String Ten,Ngaysinh ngay,double diem,Lop lop)
+    {
+      this.MSSV = ms;
+      this.HoVaTen = Ten;
+      this.ngaysinh = ngay;
+      this.DTB = diem;
+      this.lop = lop;
+    }
+    // Operation
+  }
+class Ngaysinh
+{
+  // Attribute
+  private int ngaysinh;
+  private int thangsinh;
+  private int namsinh;
+  // Constructor
+  public Ngaysinh(int ngay , int thang , int nam)
+  {
+    if(ngay >=1 &&ngay <=31)
+    {
+      this.ngaysinh = ngay;
+    }
+    else
+    {
+      this.ngaysinh = 1;
+    }
+    if(thang >=1 &&thang<=12)
+    {
+      this.thangsinh = thang;
+    }
+    else 
+    {
+      this.thangsinh = 1;
+    }
+    if(nam >=1900 && nam<=2023)
+    {
+      this.namsinh = nam;
+    }
+    else 
+    {
+      this.namsinh = 1;
+    }
+  }
+}
