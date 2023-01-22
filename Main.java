@@ -279,7 +279,14 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 37. Bài tập Quản lý Sinh viên trong lập trình Java | Phần 2
+    Lop cntt = new Lop("21CTT2","CNTT");
+    Lop cnsh = new Lop("21CSH2","CNSH");
 
+    Ngaysinh A = new Ngaysinh(12,12,2003);
+    Ngaysinh B = new Ngaysinh(23,3,2003);
+
+    SinhVien svA = new SinhVien(21120023," A ",A,9.0,cntt);
+    System.out.println(cntt.tenlop);
   }
 }
 
@@ -770,37 +777,48 @@ class SinhVien
     // Operation
   }
 class Ngaysinh
-{
-  // Attribute
-  private int ngaysinh;
-  private int thangsinh;
-  private int namsinh;
-  // Constructor
-  public Ngaysinh(int ngay , int thang , int nam)
   {
-    if(ngay >=1 &&ngay <=31)
+    // Attribute
+    private int ngaysinh;
+    private int thangsinh;
+    private int namsinh;
+    // Constructor
+    public Ngaysinh(int ngay , int thang , int nam)
     {
-      this.ngaysinh = ngay;
-    }
-    else
-    {
-      this.ngaysinh = 1;
-    }
-    if(thang >=1 &&thang<=12)
-    {
-      this.thangsinh = thang;
-    }
-    else 
-    {
-      this.thangsinh = 1;
-    }
-    if(nam >=1900 && nam<=2023)
-    {
-      this.namsinh = nam;
-    }
-    else 
-    {
-      this.namsinh = 1;
+      if(ngay >=1 &&ngay <=31)
+      {
+        this.ngaysinh = ngay;
+      }
+      else
+      {
+        this.ngaysinh = 1;
+      }
+      if(thang >=1 &&thang<=12)
+      {
+        this.thangsinh = thang;
+      }
+      else 
+      {
+        this.thangsinh = 1;
+      }
+      if(nam >=1900 && nam<=2023)
+      {
+        this.namsinh = nam;
+      }
+      else 
+      {
+        this.namsinh = 1;
+      }
     }
   }
-}
+class Lop
+  {
+    public String tenlop;
+    public String tenkhoa;
+    // Constructor
+    public Lop(String tenlop , String tenkhoa)
+    {
+      this.tenlop= tenlop;
+      this.tenkhoa = tenkhoa;
+    }
+  }
