@@ -636,3 +636,20 @@ class TacGia
     return this.day + "/" + this.month + "/" + this.year;
   }
 }
+
+
+// ------------------------------------------------------------------------------------
+// Java 36. Bài tập Quản lý Bộ phim trong lập trình Java | Phần 2
+class Java36
+  {
+    // Attribute
+    private String tenphim;
+    private int  namsanxuat;
+    private double giave;
+    private String tenhangsanxuat;
+    private String quocgiasanxuat;
+    private int ngaychieu;
+    private int thangchieu;
+    private int namchieu;
+
+  }
