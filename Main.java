@@ -286,7 +286,8 @@ public class Main
     Ngaysinh B = new Ngaysinh(23,3,2003);
 
     SinhVien svA = new SinhVien(21120023," A ",A,9.0,cntt);
-    System.out.println(cntt.tenlop);
+    // Không được xài svA.lop do không cùng kiểu dữ kiệu
+    System.out.println("sinh vien A hoc khoa : " + cntt.tenkhoa);
   }
 }
 
