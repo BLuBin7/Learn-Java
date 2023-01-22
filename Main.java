@@ -665,4 +665,11 @@ class Phim
       this.namchieu = namchieu;
     }
 
+    // Operation
+    public String date(int ngaychieu , int thangchieu, int namchieu)
+    {
+      return this.ngaychieu + "/" + this.thangchieu + "/" + this.namchieu;
+    }
+
+    
   }
