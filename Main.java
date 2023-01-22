@@ -660,9 +660,30 @@ class Phim
       this.giave = gia;
       this.tenhangsanxuat = tenhangsx;
       this.quocgiasanxuat = quocgiasx;
-      this.ngaychieu = ngaychieu;
-      this.thangchieu = thangchieu;
-      this.namchieu = namchieu;
+      if(ngaychieu >=1&& ngaychieu<=31)
+      {
+        return this.ngaychieu = ngaychieu;
+      }
+      else 
+      {
+        return this.ngaychieu = 1;
+      }
+      if(this.thangchieu >=1 &&this.thangchieu<=12)
+      {
+       return this.thangchieu = thangchieu;
+      }
+      else
+      {
+        return this.thangchieu = 1;
+      }
+      if(this.namchieu >=2022 &&this.namchieu<=2023)
+      {
+        return this.namchieu = namchieu;
+      }
+      else 
+      {
+        return this.namchieu = 2023;
+      }
     }
 
     // Operation
@@ -670,6 +691,8 @@ class Phim
     {
       return this.ngaychieu + "/" + this.thangchieu + "/" + this.namchieu;
     }
+    
+    public boolean 
 
     
   }
