@@ -274,7 +274,7 @@ public class Main
     System.out.println("Gia ve phim Aquaman la : " + Aquaman.giave());
     System.out.println("GIa ve phim Blackpaner 2 : " + BlackPaner2.giave());
     System.out.println("So sanh gia ve Aquaman co re hon BlackPaner2 khong : " + Aquaman.KiemTragiaverehon(BlackPaner2));
-
+    System.out.println("So tien sau khi khuyen mai 5% : " + Aquaman.KhuyenMai(5));
 
   }
 }
@@ -686,6 +686,12 @@ class Phim
     {
       // "this" này trong phim 1 , "phimkhac" trong phim 2
       return this.giave < phimkhac.giave;
+      // nếu đúng trả về true
+    }
+
+    public double KhuyenMai(double x)
+    {
+      return this.giave - (this.giave)*x/100;
     }
   }
 class HangSanXuat
