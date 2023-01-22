@@ -253,14 +253,28 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 35. Bài tập Quản lý Sách trong lập trình Java | Phần 2
-    Sach nhapmon = new Sach(2020 , "nhap mon lap trinh" , 86.000);
-    Sach DSA = new Sach(2021,"Data Structures and Agorithms",90.000);
-    System.out.println("Ten sach 1 la : " + nhapmon.toString());
-    System.out.println("Ten sach 2 la : " + DSA.toString());
-    System.out.println("Kiem tra 2 cuon sach co cung nam khong : " +nhapmon.equals(DSA));
-    System.out.println("Gia sach nhap mon lap trinh sau khi giam 5% : " + nhapmon.GiamGia(5));
+    // Sach nhapmon = new Sach(2020 , "nhap mon lap trinh" , 86.000);
+    // Sach DSA = new Sach(2021,"Data Structures and Agorithms",90.000);
+    // System.out.println("Ten sach 1 la : " + nhapmon.toString());
+    // System.out.println("Ten sach 2 la : " + DSA.toString());
+    // System.out.println("Kiem tra 2 cuon sach co cung nam khong : " +nhapmon.equals(DSA));
+    // System.out.println("Gia sach nhap mon lap trinh sau khi giam 5% : " + nhapmon.GiamGia(5));
 
-    
+
+    // ------------------------------------------------------------------------------------
+    // Java 36. Bài tập Quản lý Bộ phim trong lập trình Java | Phần 2
+    Ngay ngay1 = new Ngay(20,12,2022);
+    Ngay ngay2 = new Ngay(22,12,2022);
+
+    HangSanXuat hang1 = new HangSanXuat("Marvel" , "US");
+    HangSanXuat hang2 = new HangSanXuat("Marvel" , "US");
+
+    Phim Aquaman = new Phim("Aqua Man", 2022, 100.000 , hang1 ,ngay1);
+    Phim BlackPaner2 = new Phim("Black Paner 2", 2022,120.000, hang2 ,ngay2);
+    System.out.println("Gia ve phim Aquaman la : " + Aquaman.giave());
+    System.out.println("GIa ve phim Blackpaner 2 : " + BlackPaner2.giave());
+    System.out.println("So sanh gia ve Aquaman co re hon BlackPaner2 khong : " + Aquaman.KiemTragiaverehon(BlackPaner2));
+
 
   }
 }
@@ -377,6 +391,7 @@ class MyDate
     { 
       if(d >= 1 && d <= 31)
       {
+        // không có return
         this.day = d;
       }
       else
@@ -621,7 +636,9 @@ class TacGia
 {
   // Attribute
   private String tentacgia;
-  private double day, double month , double year ;
+  private double day;
+  private double month ;
+  private double year ;
   // Constructor
   public TacGia(String ten, double d, double m , double y)
   {
@@ -639,86 +656,84 @@ class TacGia
 
 
 // ------------------------------------------------------------------------------------
-// Java 36. Bài tập Quản lý Bộ phim trong lập trình Java | Phần 2
+// Java 36
 class Phim
   {
     // Attribute
     private String tenphim;
     private int  namsanxuat;
     private double giave;
-    private String tenhangsanxuat;
-    private String quocgiasanxuat;
-    private int ngaychieu;
-    private int thangchieu;
-    private int namchieu;
+    private HangSanXuat hangsanxuat;
+    private Ngay ngaychieu;
 
     // Contructor
-    public Phim(iString ten, int namsx , double gia , String tenhangsx , String quocgiasx,int ngaychieu,int thangchieu,int nam chieu)
+    public Phim(String ten, int namsx , double gia , HangSanXuat hangsx , Ngay ngaychieu)
     {
       this.tenphim = ten;
-      this.namsanxuat = nam;
+      this.namsanxuat = namsx;
       this.giave = gia;
-      this.tenhangsanxuat = tenhangsx;
-      this.quocgiasanxuat = quocgiasx;
-      if(ngaychieu >=1&& ngaychieu<=31)
-      {
-        return this.ngaychieu = ngaychieu;
-      }
-      else 
-      {
-        return this.ngaychieu = 1;
-      }
-      if(this.thangchieu >=1 &&this.thangchieu<=12)
-      {
-       return this.thangchieu = thangchieu;
-      }
-      else
-      {
-        return this.thangchieu = 1;
-      }
-      if(this.namchieu >=2022 &&this.namchieu<=2023)
-      {
-        return this.namchieu = namchieu;
-      }
-      else 
-      {
-        return this.namchieu = 2023;
-      }
+      this.hangsanxuat = hangsx;
+      this.ngaychieu = ngaychieu;
     }
 
     // Operation
-    public String date(int ngaychieu , int thangchieu, int namchieu)
-    {
-      return this.ngaychieu + "/" + this.thangchieu + "/" + this.namchieu;
-    }
-    
-    public double giave(double gia)
+    public double giave()
     {
       return this.giave;
     }
 
-    public boolean equals(Object obj)
+    public boolean KiemTragiaverehon(Phim phimkhac)
     {
-      if(this == obj)
+      // "this" này trong phim 1 , "phimkhac" trong phim 2
+      return this.giave < phimkhac.giave;
+    }
+  }
+class HangSanXuat
+  {
+    // Attributes
+    private String tenhangsanxuat; 
+    private String quocgiasanxuat; 
+    // Contructor
+    public HangSanXuat(String ten , String quocgia)
+    {
+      this.tenhangsanxuat = ten;
+      this.quocgiasanxuat = quocgia;
+    }
+  }
+
+class Ngay
+  {
+    // Attribute
+    private int ngay;
+    private int thang;
+    private int nam;
+
+    // Constructor
+  public Ngay(int d , int m , int y)
+    {
+    if(d >=1&& d<=31)
       {
-        return true;
+        this.ngay = d;
       }
-      if(obj == null)
+      else 
       {
-        return false;
+        this.ngay = 1;
       }
-      if(this.getClass() != obj.getClass())
+      if(m >=1 &&m<=12)
       {
-        return false;
-      }
-      Phim other = (Phim) obj;
-      if(this.giave(double gia) != other.giave(double gia))
-      {
-        return false;
+      this.thang = m;
       }
       else
       {
-        return true;
+        this.thang = 1;
+      }
+      if(y>=2022 &&y<=2023)
+      {
+        this.nam = y;
+      }
+      else 
+      {
+        this.nam = 2023;
       }
     }
   }
