@@ -692,7 +692,33 @@ class Phim
       return this.ngaychieu + "/" + this.thangchieu + "/" + this.namchieu;
     }
     
-    public boolean 
+    public double giave(double gia)
+    {
+      return this.giave;
+    }
 
-    
+    public boolean equals(Object obj)
+    {
+      if(this == obj)
+      {
+        return true;
+      }
+      if(obj == null)
+      {
+        return false;
+      }
+      if(this.getClass() != obj.getClass())
+      {
+        return false;
+      }
+      Phim other = (Phim) obj;
+      if(this.giave(double gia) != other.giave(double gia))
+      {
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    }
   }
