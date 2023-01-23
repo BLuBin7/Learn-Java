@@ -286,11 +286,20 @@ public class Main
     Ngaysinh B = new Ngaysinh(23,3,2003);
 
     SinhVien svA = new SinhVien(21120023," A ",A,9.0,cntt);
-    // Không được xài svA.lop do không cùng kiểu dữ kiệu
+    SinhVien svB = new SinhVien(21120067," B ",B,4.0,cntt);
+    // #1
     //solution 1
     System.out.println("sinh vien A hoc khoa : " + cntt.Gettenkhoa());
     // solution 2
-    System.out.println("sinh vien A hoc khoa : " + svA.laytenkhoa());
+    System.out.println("sinh vien B hoc khoa : " + svB.laytenkhoa());
+
+    // #2
+    System.out.println("SV A co dau khong voi DTB "+ svA.getDTB() +   " : "  + svA.dauhayrot());
+    System.out.println("SV B co dau khong voi DTB "+ svB.getDTB() + " : " + svB.dauhayrot());
+  
+  // #3
+    System.out.println("So sanh ngay sinh khac nhau : " + A.equals(B));
+
 
   }
 }
@@ -784,7 +793,17 @@ class SinhVien
     {
       return lop.Gettenkhoa();
     }
-  
+
+    public boolean dauhayrot()
+    {
+      return this.DTB >= 5;
+    }
+
+    public double getDTB()
+    {
+      return DTB;
+    }
+    
   }
 class Ngaysinh
   {
@@ -819,6 +838,16 @@ class Ngaysinh
       {
         this.namsinh = 1;
       }
+    }
+    // Operation
+    public int getNgaysinh()
+    {
+      return this.ngaysinh;
+      // Sao lại không xài được "return ngay "
+    }
+    public boolean equals(Ngaysinh other)
+    {
+      return this.ngaysinh != other.ngaysinh;
     }
   }
 class Lop
