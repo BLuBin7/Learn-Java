@@ -842,11 +842,11 @@ class Ngaysinh
     // Operation
     public int getNgaysinh()
     {
-      return this.ngaysinh;
-      // Sao lại không xài được "return ngay "
+      return ngaysinh;
+      // "return ngaysinh" trong biến chứ không phải return tham số hóa "ngay"
     }
     public boolean equals(Ngaysinh other)
-    {
+    { 
       return this.ngaysinh != other.ngaysinh;
     }
   }
@@ -855,10 +855,10 @@ class Lop
     private String tenlop;
     private String tenkhoa;
     // Constructor
-    public Lop(String tenlop , String tenkhoa)
+    public Lop(String tenlop , String khoa)
     {
       this.tenlop= tenlop;
-      this.tenkhoa = tenkhoa;
+      this.tenkhoa = khoa;
     }
 
     public String Gettenkhoa()
