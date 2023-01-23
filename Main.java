@@ -287,7 +287,11 @@ public class Main
 
     SinhVien svA = new SinhVien(21120023," A ",A,9.0,cntt);
     // Không được xài svA.lop do không cùng kiểu dữ kiệu
-    System.out.println("sinh vien A hoc khoa : " + cntt.tenkhoa);
+    //solution 1
+    System.out.println("sinh vien A hoc khoa : " + cntt.Gettenkhoa());
+    // solution 2
+    System.out.println("sinh vien A hoc khoa : " + svA.laytenkhoa());
+
   }
 }
 
@@ -776,6 +780,11 @@ class SinhVien
       this.lop = lop;
     }
     // Operation
+    public String laytenkhoa()
+    {
+      return lop.Gettenkhoa();
+    }
+  
   }
 class Ngaysinh
   {
@@ -814,12 +823,17 @@ class Ngaysinh
   }
 class Lop
   {
-    public String tenlop;
-    public String tenkhoa;
+    private String tenlop;
+    private String tenkhoa;
     // Constructor
     public Lop(String tenlop , String tenkhoa)
     {
       this.tenlop= tenlop;
       this.tenkhoa = tenkhoa;
+    }
+
+    public String Gettenkhoa()
+    {
+      return tenkhoa;
     }
   }
