@@ -279,35 +279,57 @@ public class Main
 
     // ------------------------------------------------------------------------------------
     // Java 37. Bài tập Quản lý Sinh viên trong lập trình Java | Phần 2
-    Lop cntt = new Lop("21CTT2","CNTT");
-    Lop cnsh = new Lop("21CSH2","CNSH");
+   //  Lop cntt = new Lop("21CTT2","CNTT");
+   //  Lop cnsh = new Lop("21CSH2","CNSH");
 
-    Ngaysinh A = new Ngaysinh(12,12,2003);
-    Ngaysinh B = new Ngaysinh(23,3,2003);
+   //  Ngaysinh A = new Ngaysinh(12,12,2003);
+   //  Ngaysinh B = new Ngaysinh(23,3,2003);
 
-    SinhVien svA = new SinhVien(21120023," A ",A,9.0,cntt);
-    SinhVien svB = new SinhVien(21120067," B ",B,4.0,cntt);
-    // #1
-    //solution 1
-    System.out.println("sinh vien A hoc khoa : " + cntt.Gettenkhoa());
-    // solution 2
-    System.out.println("sinh vien B hoc khoa : " + svB.laytenkhoa());
+   //  SinhVien svA = new SinhVien(21120023," A ",A,9.0,cntt);
+   //  SinhVien svB = new SinhVien(21120067," B ",B,4.0,cntt);
+   //  // #1
+   //  //solution 1
+   //  System.out.println("sinh vien A hoc khoa : " + cntt.Gettenkhoa());
+   //  // solution 2
+   //  System.out.println("sinh vien B hoc khoa : " + svB.laytenkhoa());
 
-    // #2
-    System.out.println("SV A co dau khong voi DTB "+ svA.getDTB() +   " : "  + svA.dauhayrot());
-    System.out.println("SV B co dau khong voi DTB "+ svB.getDTB() + " : " + svB.dauhayrot());
+   //  // #2
+   //  System.out.println("SV A co dau khong voi DTB "+ svA.getDTB() +   " : "  + svA.dauhayrot());
+   //  System.out.println("SV B co dau khong voi DTB "+ svB.getDTB() + " : " + svB.dauhayrot());
   
-  // #3
-    System.out.println("So sanh ngay sinh khac nhau : " + A.equals(B));
+   // // #3
+   //  System.out.println("So sanh ngay sinh khac nhau : " + A.equals(B));
 
+
+   // ------------------------------------------------------------------------------------
+   // Java 38. Bài tập quản lý Máy tính trong lập trình Java | Phần 2
+    // Quocgia vn = new Quocgia("A","VietNam");
+
+    // HangSanXuat2 hang1 = new HangSanXuat2("Dell",vn);
+    // HangSanXuat2 hang2 = new HangSanXuat2("Asus",vn);
+
+    
+    // NgaySanXuat ngay1 = new NgaySanXuat(12,3,2011);
+    
+    // MayTinh mt1 = new MayTinh(hang1,ngay1,50.000,2);
+    // MayTinh mt2 = new MayTinh(hang2,ngay1,30.000,2);
+
+     
+    // System.out.println("Kiem tra gia mt 1 co re hon gia mt 2 khong : " + mt1.Kiemtragiaban(mt2) );
+    // System.out.println("Quoc gia : " + mt1.tenquocgia());
+
+
+    //------------------------------------------------------------------------------------
+    // INHERITANCE
+    // Java 39 . Khái niệm về Kế Thừa trong lập trình Java | Phần 2
 
   }
 }
 
 // ------------------------------------------------------------------------------------
-// Java 30
-// nếu mà là public class thì phải đặt cái class thành 1 file riêng biệt
-//  còn nếu là class thôi thì ko cần đặt thành 1 file riêng biệt
+  // Java 30
+  // nếu mà là public class thì phải đặt cái class thành 1 file riêng biệt
+  //  còn nếu là class thôi thì ko cần đặt thành 1 file riêng biệt
   class Java30
   {
     //  bước 1 : khai báo thuộc tính
@@ -346,8 +368,8 @@ public class Main
 
 
 
-// ------------------------------------------------------------------------------------
-// Java 31
+  // ------------------------------------------------------------------------------------
+  // Java 31
   class HoaDonCaPhe
   {
     // Attribute
@@ -404,9 +426,9 @@ public class Main
     }
   }
 
-// ------------------------------------------------------------------------------------
-// Java 32
-class MyDate
+  // ------------------------------------------------------------------------------------
+  // Java 32
+  class MyDate
   {
     // Attribute
     private int day , month , year;
@@ -480,9 +502,9 @@ class MyDate
   }
 
 
-// ------------------------------------------------------------------------------------
-// Java 33
-class Java33
+  // ------------------------------------------------------------------------------------
+  // Java 33
+  class Java33
   {
     // Attribute
     private int day , month , year;
@@ -525,13 +547,13 @@ class Java33
       return this.day + "/" + this.month +"/" +this.year;
     }
   }
-// ------------------------------------------------------------------------------------
-// Java 34
-// Lưu ý : tại sao lại có bài này , chỉ đơn giản là so sánh thì dùng TOÁN TỬ ĐIỀU KIỆN như bình thường thôi 
-// Cái này chỉ so sánh được những con số hay kiểu dữ liệu nguyên thủy như INT , LONG , DOUBLE , BOOLEAN thôi
-// còn so sánh 2 ĐỐI TƯỢNG không sử dụng được cái này , mà phải so sánh thông qua PHƯƠNG THỨC (OPERATION)
-class Java34
- {
+  // ------------------------------------------------------------------------------------
+  // Java 34
+  // Lưu ý : tại sao lại có bài này , chỉ đơn giản là so sánh thì dùng TOÁN TỬ ĐIỀU KIỆN như bình thường thôi 
+  // Cái này chỉ so sánh được những con số hay kiểu dữ liệu nguyên thủy như INT , LONG , DOUBLE , BOOLEAN thôi
+  // còn so sánh 2 ĐỐI TƯỢNG không sử dụng được cái này , mà phải so sánh thông qua PHƯƠNG THỨC (OPERATION)
+  class Java34
+  {
   // Attribute
   private int day ,month,year;
 
@@ -602,11 +624,11 @@ class Java34
   {
     return this.day + "/" + this.month +"/" +this.year;
   }
- }
-// ------------------------------------------------------------------------------------
-// Java 35
-class Sach
-{
+  }
+  // ------------------------------------------------------------------------------------
+  // Java 35
+  class Sach
+  {
   // Attribute
   private int namxuatban;
   private String tenSach;
@@ -656,9 +678,9 @@ class Sach
   {
     return this.giaban - (this.giaban)*x/100;
   }
-}
-class TacGia
-{
+  }
+  class TacGia
+  {
   // Attribute
   private String tentacgia;
   private double day;
@@ -677,12 +699,12 @@ class TacGia
   {
     return this.day + "/" + this.month + "/" + this.year;
   }
-}
+  }
 
 
-// ------------------------------------------------------------------------------------
-// Java 36
-class Phim
+  // ------------------------------------------------------------------------------------
+  // Java 36
+  class Phim
   {
     // Attribute
     private String tenphim;
@@ -719,7 +741,7 @@ class Phim
       return this.giave - (this.giave)*x/100;
     }
   }
-class HangSanXuat
+  class HangSanXuat
   {
     // Attributes
     private String tenhangsanxuat; 
@@ -732,7 +754,7 @@ class HangSanXuat
     }
   }
 
-class Ngay
+  class Ngay
   {
     // Attribute
     private int ngay;
@@ -768,9 +790,9 @@ class Ngay
       }
     }
   }
-// ------------------------------------------------------------------------------------
-// Java 37
-class SinhVien
+  // ------------------------------------------------------------------------------------
+  // Java 37
+  class SinhVien
   {
     // Attribute
     private double MSSV;
@@ -805,7 +827,7 @@ class SinhVien
     }
     
   }
-class Ngaysinh
+  class Ngaysinh
   {
     // Attribute
     private int ngaysinh;
@@ -850,7 +872,7 @@ class Ngaysinh
       return this.ngaysinh != other.ngaysinh;
     }
   }
-class Lop
+  class Lop
   {
     private String tenlop;
     private String tenkhoa;
@@ -866,3 +888,145 @@ class Lop
       return tenkhoa;
     }
   }
+// ------------------------------------------------------------------------------------
+// Java 38.
+
+class NgaySanXuat
+{
+  // Attributes
+  private int ngay;
+  private int thang;
+  private int nam;
+  // Constructor
+  public NgaySanXuat(int ngay , int thang , int nam )
+  {
+    this.ngay = ngay;
+    this.thang = thang;
+    this.nam = nam;
+  }
+  // Operation
+
+}
+class Quocgia
+{
+  // Attribute
+  private String MaQuocGia;
+  private String TenQuocGia;
+  // Contructor
+  public Quocgia(String MaQuocGia , String TenQuocGia)
+  {
+    this.MaQuocGia = MaQuocGia;
+    this.TenQuocGia = TenQuocGia;
+  }
+  // Operation
+  public String GetTenquocgia()
+  {
+    return this.TenQuocGia;
+  }
+}
+
+class HangSanXuat2
+{
+  //Attributes
+  private String tenhang;
+  private Quocgia quocgia;
+  // Contructor
+  public HangSanXuat2(String tenhang , Quocgia quocgia)
+  {
+    this.tenhang = tenhang;
+    this.quocgia = quocgia;
+  }
+  // Operation
+  public String Laytenquocgia()
+  {
+    return this.quocgia.GetTenquocgia();
+  }
+}
+class MayTinh
+{
+  // Attributes
+  private HangSanXuat2 hangsx;
+  private NgaySanXuat ngaysx;
+  private double Giaban;
+  private int thoigianbaohanh;
+  // Constructor
+  public MayTinh( HangSanXuat2 hangsx , NgaySanXuat ngaysx , double gia , int thoigianbh)
+  {
+    this.hangsx = hangsx;
+    this.ngaysx = ngaysx;
+    this.Giaban = gia;
+    this.thoigianbaohanh = thoigianbh;
+  }
+  // Operation
+  public String tenquocgia()
+  {
+    return hangsx.Laytenquocgia();
+  }
+  public boolean Kiemtragiaban(MayTinh other)
+  {
+    return this.Giaban < other.Giaban;
+  }
+}
+
+
+// ------------------------------------------------------------------------------------
+// Java 39
+class ConNguoi
+{
+  // Attributes 
+  private String Hovaten;
+  private int namSinh;
+
+  // Constructors
+  public ConNguoi(String Hovaten, int namSinh)
+  {
+    this.Hovaten = Hovaten;
+    this.namSinh = namSinh;
+  }
+  // Operations
+  public void  an()
+  {
+    System.out.println("an");
+  }
+  public void uong()
+  {
+    System.out.println("uong");
+  }
+  public void ngu()
+  {
+    System.out.println("ngu");
+  }
+}
+class Hocsinh
+{
+  // Attribute
+  private String Hovaten;
+  private int namSinh;
+  private String tenlop;
+  private String tentruong;
+  // Contructor
+  public Hocsinh(String Hovaten, int namSinh,String tenlop,String tentruong)
+  {
+    this.Hovaten = Hovaten;
+    this.namSinh = namSinh;
+    this.tenlop = tenlop;
+    this.tentruong = tentruong;
+  }
+  // Operation
+  public void an()
+  {
+    System.out.println("an");
+  }
+  public void uong()
+  {
+    System.out.println("uong");
+  }
+  public void ngu()
+  {
+    System.out.println("ngu");
+  }
+  public void lambt()
+  {
+    System.out.println("lambt");
+  }
+}
