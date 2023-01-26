@@ -322,7 +322,10 @@ public class Main
     //------------------------------------------------------------------------------------
     // INHERITANCE
     // Java 39 . Khái niệm về Kế Thừa trong lập trình Java | Phần 2
-
+    Hocsinh gg = new Hocsinh();
+    // kiểu void thì không được println
+    gg.an();
+    
   }
 }
 
@@ -974,14 +977,14 @@ class MayTinh
 class ConNguoi
 {
   // Attributes 
+  protected String name;
   private String Hovaten;
   private int namSinh;
 
   // Constructors
-  public ConNguoi(String Hovaten, int namSinh)
+  public ConNguoi(String name)
   {
-    this.Hovaten = Hovaten;
-    this.namSinh = namSinh;
+    this.name = name;
   }
   // Operations
   public void  an()
@@ -997,26 +1000,17 @@ class ConNguoi
     System.out.println("ngu");
   }
 }
-class Hocsinh
+
+
+class Hocsinh extends ConNguoi
 {
   // Attribute
-  private String Hovaten;
-  private int namSinh;
-  private String tenlop;
-  private String tentruong;
   // Contructor
-  public Hocsinh(String Hovaten, int namSinh,String tenlop,String tentruong)
+  public Hocsinh()
   {
-    this.Hovaten = Hovaten;
-    this.namSinh = namSinh;
-    this.tenlop = tenlop;
-    this.tentruong = tentruong;
+    super("Hocsinh");
   }
   // Operation
-  public void an()
-  {
-    System.out.println("an");
-  }
   public void uong()
   {
     System.out.println("uong");
