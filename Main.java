@@ -1,3 +1,4 @@
+import java.lang.reflect.Constructor;
 import java.util.Scanner;
 
 public class Main 
@@ -322,22 +323,36 @@ public class Main
     //------------------------------------------------------------------------------------
     // INHERITANCE
     // Java 39 . Khái niệm về Kế Thừa trong lập trình Java | Phần 2
-    Hocsinh sv= new Hocsinh();
-    HocsinhGioi svA = new HocsinhGioi();
-    Giaovien gvA = new Giaovien();
-    // kiểu void thì không được println
-    // kế thừa ăn của con người
-    System.out.println("Hocsinh :");
-    sv.an();
-    // kế thùa làm bài tập của Hocsinh
-    System.out.println("HocsinhGioi :");
-    svA.lambt();
-    svA.hocgioi();
-    // kế thừa ngủ của con người
-    System.out.println("Giaovien :");
-    gvA.ngu();
-    gvA.dayhoc();
-    
+    // Hocsinh sv= new Hocsinh();
+    // HocsinhGioi svA = new HocsinhGioi();
+    // Giaovien gvA = new Giaovien();
+    // // kiểu void thì không được println
+    // // kế thừa ăn của con người
+    // System.out.println("Hocsinh :");
+    // sv.an();
+    // // kế thùa làm bài tập của Hocsinh
+    // System.out.println("HocsinhGioi :");
+    // svA.lambt();
+    // svA.hocgioi();
+    // // kế thừa ngủ của con người
+    // System.out.println("Giaovien :");
+    // gvA.ngu();
+    // gvA.dayhoc();
+
+    //------------------------------------------------------------------------------------
+    // Java 41. Vì sao không có đa kế thừa trong Java? | Phần 2
+
+
+    //------------------------------------------------------------------------------------
+    // Java 42. Ghi đè phương thức - Overriding trong lập trình Java | Phần 2
+    Dog d = new Dog("null");
+    Cat c = new Cat("null");
+    System.out.println("Dog : ");
+    d.an();
+    d.makeSound();
+    System.out.println("Cat : ");
+    c.an();
+    c.makeSound();
   }
 }
 
@@ -1060,4 +1075,67 @@ class Giaovien extends ConNguoi
   {
     System.out.println("dayhoc");
   }
+}
+
+//------------------------------------------------------------------------------------
+// Java 42
+class Animal 
+{
+  // Attributes
+  protected String name;
+  // Constructor
+  public Animal(String name)
+  {
+    this.name = name;
+  }
+  // Operations
+  public void an()
+  {
+    System.out.println("an");
+  }
+  public void ngu()
+  {
+    System.out.println("ngu");
+  }
+  public void makeSound()
+  {
+    System.out.println("makeSound");;
+  }
+}
+class Dog extends Animal
+{
+  // Constructor
+  public Dog(String name)
+  {
+    // super ở đây tượng  trưng cho lớp cha (Animal)
+    super("Dog");
+  }
+  // Operation
+  // @Override
+  public void an()
+  {
+    System.out .println("an xuong");
+  }
+  public void makeSound()
+  {
+    System.out.println("Gau Gau");
+  }
+}
+class Cat extends Animal
+{
+  public  Cat(String name)
+  {
+    // super ở đây tượng  trưng cho lớp cha (Animal)
+    super("Cat");
+  }
+  // Operation
+  // @Override
+    public void an()
+    {
+      System.out.println("an ca");
+    }
+    public void makeSound()
+    {
+      System.out.println("Meo Meo");
+    }
 }
