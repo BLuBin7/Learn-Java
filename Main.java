@@ -324,9 +324,19 @@ public class Main
     // Java 39 . Khái niệm về Kế Thừa trong lập trình Java | Phần 2
     Hocsinh sv= new Hocsinh();
     HocsinhGioi svA = new HocsinhGioi();
+    Giaovien gvA = new Giaovien();
     // kiểu void thì không được println
+    // kế thừa ăn của con người
+    System.out.println("Hocsinh :");
     sv.an();
+    // kế thùa làm bài tập của Hocsinh
+    System.out.println("HocsinhGioi :");
     svA.lambt();
+    svA.hocgioi();
+    // kế thừa ngủ của con người
+    System.out.println("Giaovien :");
+    gvA.ngu();
+    gvA.dayhoc();
     
   }
 }
@@ -980,7 +990,7 @@ class ConNguoi
 {
   // Attributes 
   protected String name;
-  
+
   // Constructors
   public ConNguoi(String name)
   {
@@ -1004,7 +1014,6 @@ class ConNguoi
 
 class Hocsinh extends ConNguoi
 {
-  // Attribute
   // Contructor
   public Hocsinh()
   {
@@ -1037,5 +1046,18 @@ class HocsinhGioi extends Hocsinh
   public void hocgioi()
   {
     System.out.println("hocgioi");
+  }
+}
+
+class Giaovien extends ConNguoi
+{
+  // Contructor
+  public Giaovien()
+  {
+     super("Giaovien");
+  }
+  public void dayhoc()
+  {
+    System.out.println("dayhoc");
   }
 }
