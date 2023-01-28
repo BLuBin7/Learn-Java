@@ -1244,3 +1244,14 @@ class Hinhtron extends Hinh
     this.bankinh = bankinh;
   }
 }
+class Hinhchunhat extends Hinh
+{
+  private double chieudai;
+  private double chieurong;
+  public Hinhchunhat(Toado toado,double chieudai,double chieurong)
+  {
+    super(toado);
+    this.chieudai = chieudai;
+    this.chieurong = chieurong;
+  }
+}
