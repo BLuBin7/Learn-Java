@@ -1210,3 +1210,11 @@ class Toado
     this.toado = toado;
   }
 }
+abstract class  Hinh
+{
+  protected Toado toado;
+  public Hinh(Toado toado)
+  {
+    this.toado = toado;
+  }
+}
