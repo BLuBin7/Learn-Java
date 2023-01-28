@@ -368,7 +368,9 @@ public class Main
     //------------------------------------------------------------------------------------
     // Java 44. Lớp và phương thức trừu tượng Abstract trong Java | Phần 2
     // kết hợp giữa Override và abstract
-      
+      Toado td1 = new Toado(5 , 5);
+      Toado td2 = new Toado(6.5,6.4);
+      Toado td3 = new Toado(7,7);
   }
 }
 
@@ -1209,11 +1211,13 @@ class MyMath
 class Toado
 {
   // Attributes
-  private double toado;
+  private double x;
+  private double y;
   // Constructors
-  public Toado(double toado)
+  public Toado(double x,double y)
   {
-    this.toado = toado;
+    this.x = x;
+    this.y = y;
   }
 }
 abstract class  Hinh
