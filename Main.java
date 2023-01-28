@@ -357,12 +357,18 @@ public class Main
 
     //------------------------------------------------------------------------------------
     // Java 43. Nạp chồng phương thức - Overloading trong Java | Phần 2
-      MyMath add = new MyMath();
-      System.out.println(add.TimMin(3, 4));
-      System.out.println(add.TimMin(3.5,6.5));
-      System.out.println(add.TinhTong(3,5));
-      double[] d = new double[] {1,2,3,5,};
-      System.out.println(add.TinhTong(d));
+      // MyMath add = new MyMath();
+      // System.out.println(add.TimMin(3, 4));
+      // System.out.println(add.TimMin(3.5,6.5));
+      // System.out.println(add.TinhTong(3,5));
+      // double[] d = new double[] {1,2,3,5,};
+      // System.out.println(add.TinhTong(d));
+
+
+    //------------------------------------------------------------------------------------
+    // Java 44. Lớp và phương thức trừu tượng Abstract trong Java | Phần 2
+    // kết hợp giữa Override và abstract
+      
   }
 }
 
@@ -1216,5 +1222,12 @@ abstract class  Hinh
   public Hinh(Toado toado)
   {
     this.toado = toado;
+  }
+}
+class Diem extends Hinh
+{
+  public Diem(Toado toado)
+  {
+    super(toado);
   }
 }
