@@ -1228,6 +1228,19 @@ class Diem extends Hinh
 {
   public Diem(Toado toado)
   {
+    // ở đây là 1 kiểu dữ liệu double có tên là "toado"
+    //  chứ không phải truyền vào chữ tọa độ
+    // có thể đặt tên trong super là tên khác 
+    // chỉ cần thay đổi tham số truyền vào của constructor
     super(toado);
+  }
+}
+class Hinhtron extends Hinh 
+{
+  private double bankinh;
+  public Hinhtron(Toado toado,double bankinh)
+  {
+    super(toado);
+    this.bankinh = bankinh;
   }
 }
