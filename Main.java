@@ -373,9 +373,11 @@ public class Main
       Toado td3 = new Toado(7,7);
       
       Hinh diem = new Diem(td1);
-      Hinh hiinhtron = new Hinhtron(td2,6);
+      Hinh hinhtron = new Hinhtron(td2,6);
       Hinh hinhchunhat = new Hinhchunhat(td3, 3, 5);
       
+      System.out.println(hinhtron.Tinhdientich());
+      System.out.println(hinhchunhat.Tinhdientich());
   }
 }
 
@@ -1029,12 +1031,10 @@ class ConNguoi
   // Attributes 
   // kiểu dữ liệu truy vấn
   protected String name;
-  protected int namSinh;;
   // Constructors
-  public ConNguoi(String name,int namSinh)
+  public ConNguoi(String name)
   {
     this.name = name;
-    this.namSinh  = nam;
   }
   // Operations
   public void  an()
@@ -1061,7 +1061,7 @@ class Hocsinh extends ConNguoi
   public Hocsinh()
   {
     // ở đây do contructor của "ConNguoi" có tham số truyền vào là "name", nên super có truyền vào "name"
-    super("hocsinh",99);
+    super("hocsinh");
   }
   // Operation
   public void uong()
@@ -1249,6 +1249,13 @@ class Diem extends Hinh
     // có thể đặt tên trong super là tên khác 
     // chỉ cần thay đổi tham số truyền vào của constructor
     super(toado);
+  }
+  // Operation
+  // Lưu ý : phải giống operation của lớp trừu tượng (abstract)
+  // Nên mới nói đây là Override
+  public double Tinhdientich()
+  {
+    return 1 ;
   }
 }
 class Hinhtron extends Hinh 
