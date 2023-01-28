@@ -1082,6 +1082,7 @@ class Giaovien extends ConNguoi
 class Animal 
 {
   // Attributes
+  // dùng khai báo protected
   protected String name;
   // Constructor
   public Animal(String name)
