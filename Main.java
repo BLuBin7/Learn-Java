@@ -371,6 +371,11 @@ public class Main
       Toado td1 = new Toado(5 , 5);
       Toado td2 = new Toado(6.5,6.4);
       Toado td3 = new Toado(7,7);
+      
+      Hinh diem = new Diem(td1);
+      Hinh hiinhtron = new Hinhtron(td2,6);
+      Hinh hinhchunhat = new Hinhchunhat(td3, 3, 5);
+      
   }
 }
 
@@ -1222,14 +1227,21 @@ class Toado
 }
 abstract class  Hinh
 {
+  // Attributes 
   protected Toado toado;
+  // Constructors
   public Hinh(Toado toado)
   {
     this.toado = toado;
   }
+  // lớp trừu tượng(abstract) chỉ call ra thôi
+  // không được mở ngoặc nhọn
+  public abstract double Tinhdientich();
 }
+  
 class Diem extends Hinh
 {
+  // Constructors
   public Diem(Toado toado)
   {
     // ở đây là 1 kiểu dữ liệu double có tên là "toado"
@@ -1241,21 +1253,35 @@ class Diem extends Hinh
 }
 class Hinhtron extends Hinh 
 {
+  // Attributes
   private double bankinh;
+  // Constructors
   public Hinhtron(Toado toado,double bankinh)
   {
     super(toado);
     this.bankinh = bankinh;
   }
+  // Operation
+  public double Tinhdientich()
+  {
+    return Math.PI*this.bankinh*this.bankinh;
+  }
 }
 class Hinhchunhat extends Hinh
 {
+  // Attributes
   private double chieudai;
   private double chieurong;
+  // Constructors
   public Hinhchunhat(Toado toado,double chieudai,double chieurong)
   {
     super(toado);
     this.chieudai = chieudai;
     this.chieurong = chieurong;
+  }
+  // Operation
+  public double Tinhdientich()
+  {
+    return this.chieudai*this.chieurong;
   }
 }
