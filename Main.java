@@ -1196,3 +1196,17 @@ class MyMath
     return Tong;
   }
 }
+
+
+//------------------------------------------------------------------------------------
+// Java 44
+class Toado
+{
+  // Attributes
+  private double toado;
+  // Constructors
+  public Toado(double toado)
+  {
+    this.toado = toado;
+  }
+}
