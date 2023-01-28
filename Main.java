@@ -1,5 +1,5 @@
-import java.lang.reflect.Constructor;
 import java.util.Scanner;
+
 // @BLuBin
 public class Main 
 {
@@ -345,14 +345,24 @@ public class Main
 
     //------------------------------------------------------------------------------------
     // Java 42. Ghi đè phương thức - Overriding trong lập trình Java | Phần 2
-    Dog d = new Dog("null");
-    Cat c = new Cat("null");
-    System.out.println("Dog : ");
-    d.an();
-    d.makeSound();
-    System.out.println("Cat : ");
-    c.an();
-    c.makeSound();
+    // Dog d = new Dog("null");
+    // Cat c = new Cat("null");
+    // System.out.println("Dog : ");
+    // d.an();
+    // d.makeSound();
+    // System.out.println("Cat : ");
+    // c.an();
+    // c.makeSound();
+
+
+    //------------------------------------------------------------------------------------
+    // Java 43. Nạp chồng phương thức - Overloading trong Java | Phần 2
+      MyMath add = new MyMath();
+      System.out.println(add.TimMin(3, 4));
+      System.out.println(add.TimMin(3.5,6.5));
+      System.out.println(add.TinhTong(3,5));
+      double[] d = new double[] {1,2,3,5,};
+      System.out.println(add.TinhTong(d));
   }
 }
 
@@ -1004,12 +1014,14 @@ class MayTinh
 class ConNguoi
 {
   // Attributes 
+  // kiểu dữ liệu truy vấn
   protected String name;
-
+  protected int namSinh;;
   // Constructors
-  public ConNguoi(String name)
+  public ConNguoi(String name,int namSinh)
   {
     this.name = name;
+    this.namSinh  = nam;
   }
   // Operations
   public void  an()
@@ -1030,10 +1042,13 @@ class ConNguoi
 class Hocsinh extends ConNguoi
 {
   // Contructor
+  // nó đang kế thừa lại constructor của con người 
+  // nên có thể có hoặc không cần truyển tham chiếu vào cũng đc 
+  // public Hocsinh(String name,int namSinh) 
   public Hocsinh()
   {
     // ở đây do contructor của "ConNguoi" có tham số truyền vào là "name", nên super có truyền vào "name"
-    super("Hocsinh");
+    super("hocsinh",99);
   }
   // Operation
   public void uong()
@@ -1139,4 +1154,45 @@ class Cat extends Animal
     {
       System.out.println("Meo Meo");
     }
+}
+
+//------------------------------------------------------------------------------------
+// Java 43
+class MyMath
+{
+  public int TimMin(int a, int b)
+  {
+    if(a<b)
+    {
+      return a;
+    }
+    else 
+    {
+      return b;
+    }
+  }
+  public double TimMin(double a,double b)
+  {
+    if(a<b)
+    {
+      return a;
+    }
+    else 
+    {
+      return b;
+    }
+  }
+  public double TinhTong(double a,double b)
+  {
+    return a+b;
+  } 
+  public double TinhTong(double[] arr)
+  {
+    double Tong = 0;
+    for(int i=0;i<arr.length;i++)
+    {
+      Tong += arr[i];
+    }  
+    return Tong;
+  }
 }
