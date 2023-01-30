@@ -19,13 +19,16 @@ public class Main2
         // nên Interface tượng trưng cho đa kế thừa trong jvaa
         // tất cả các operation trong Interface đều là các abstract,không có tham số truyền vào chỉ có các operation
         // cách gọi của interface cũng khác vói abstract
+        // Nếu gọi ở trong hàm mà nó implements luôn thì các gọi sẽ giống như abstract
         // interface  luôn ở dạng public 
         CasioFX500 fx500 =new CasioFX500();
         Vinacal500 vn500 =new Vinacal500();
 
         System.out.println(fx500.cong(4,2));
 
-        
+        Phanmemmaytinh pmmt = new Phanmemmaytinh() ;
+        System.out.println(pmmt.cong(6,8));
+        pmmt.sapxepgiam();
         
         // Java 59. Kiểu dữ liệu Enum trong lập trình Java
         // Enum là kiểu tập hợp nhiều class hữu hạn
