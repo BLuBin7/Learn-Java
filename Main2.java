@@ -17,8 +17,16 @@ public class Main2
         // Java 46. Hiểu rõ về INTERFACE trong lập trình Java | Phần 2
         // Sử dụng Interface là do trong java không có đa kế thừa
         // nên Interface tượng trưng cho đa kế thừa trong jvaa
-        // Interface là gồm các abstract
+        // tất cả các operation trong Interface đều là các abstract,không có tham số truyền vào chỉ có các operation
+        // cách gọi của interface cũng khác vói abstract
+        // interface  luôn ở dạng public 
+        CasioFX500 fx500 =new CasioFX500();
+        Vinacal500 vn500 =new Vinacal500();
 
+        System.out.println(fx500.cong(4,2));
+
+        
+        
         // Java 59. Kiểu dữ liệu Enum trong lập trình Java
         // Enum là kiểu tập hợp nhiều class hữu hạn
     }
@@ -135,3 +143,107 @@ class Xedap extends PhuongTienDiChuyen
 
 //------------------------------------------------------------------------------------
 // Java 46
+interface Maytinhbotui
+{
+    public double cong(double a, double b);
+    public double tru(double a,double b);
+    public double nhan(double a,double b);
+    public double chia(double a,double b);
+}
+class CasioFX500 implements Maytinhbotui
+// không có constructor thì mặc định là có constructor rỗng
+// Constructor dùng để lấy dữ liệu hằng số
+{
+    // @Override
+    public double cong(double a,double b)
+    {
+        return a+b;
+    }
+    public double tru(double a,double b)
+    {
+        return a-b;
+    }
+    public double nhan(double a,double b)
+    {
+        return a*b;
+    }
+    public double chia(double a,double b)
+    {
+        return a/b;
+    }
+}
+class Vinacal500 implements Maytinhbotui
+{
+    // @Override
+    public double cong(double a,double b)
+    {
+        return a+b;
+    }
+    public double tru(double a,double b)
+    {
+        return a-b;
+    }
+    public double nhan(double a,double b)
+    {
+        return a*b;
+    }
+    public double chia(double a,double b)
+    {
+        return a/b;
+    }
+}
+interface Sapxep
+{
+    public void sapxeptang();
+    public void sapxepgiam();
+}
+class Sapxepchen implements Sapxep
+{
+    public void sapxepgiam()
+    {
+        System.out.println("sapxepchen : giam");
+    }
+    public void sapxeptang()
+    {
+        System.out.println("sapxepchen : tang");
+    }
+}
+class Sapxepchon implements Sapxep
+{
+    public void sapxeptang()
+    {
+        System.out.println("sapxepchon : tang");
+    }
+    public void sapxepgiam()
+    {
+        System.out.println("sapxepchon : giam");
+    }
+}
+class Phanmemmaytinh implements Maytinhbotui , Sapxep
+{
+    // kế thừa dưới dạng override (ghi đè)
+    public double cong(double a,double b)
+    {
+        return a+b;
+    }
+    public double tru(double a,double b)
+    {
+        return a-b;
+    }
+    public double nhan(double a,double b)
+    {
+        return a*b;
+    }
+    public double chia(double a,double b)
+    {
+        return a/b;
+    }
+    public void sapxeptang()
+    {
+        System.out.println("sapxepchon : tang");
+    }
+    public void sapxepgiam()
+    {
+        System.out.println("sapxepchon : giam");
+    }
+}
