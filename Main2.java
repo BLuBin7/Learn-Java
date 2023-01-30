@@ -2,11 +2,33 @@ public class Main2
 {
     public static void main(String[] args)
     {
-        
+        // HangSanXuat hang1 = new HangSanXuat("yamaha","Japan");
+        // HangSanXuat hang2 = new HangSanXuat("ford","US");
+        // PhuongTienDiChuyen maybay= new MayBay("A",hang1);
+        // PhuongTienDiChuyen oto= new XeOto("B",hang2);
+        // PhuongTienDiChuyen xedap= new Xedap(hang1);
+        // System.out.println(maybay.layVanToc());
+        // System.out.println(oto.layVanToc());
+        // System.out.println(xedap.layVanToc());
+        // System.out.println(maybay.loaiPhuongTien);
+
+
+        //------------------------------------------------------------------------------------
+        // Java 46. Hiểu rõ về INTERFACE trong lập trình Java | Phần 2
+        // Sử dụng Interface là do trong java không có đa kế thừa
+        // nên Interface tượng trưng cho đa kế thừa trong jvaa
+        // Interface là gồm các abstract
+
+        // Java 59. Kiểu dữ liệu Enum trong lập trình Java
+        // Enum là kiểu tập hợp nhiều class hữu hạn
     }
 }
 //------------------------------------------------------------------------------------
-// Java 45. Bài tập về kế thừa và abstract | Phần 2
+// Java 45.
+//  Lưu ý : super luôn phải ở đầu
+// super giúp cho mình có thể nhập tham chiếu vô luôn
+// hangsx không nhập tham chiếu vô được là do nó có kiểu "HangSanXuat"
+// "HangSanXuat" (kiểu này do người dùng nhập vào class "HangSanXuat")
 abstract class PhuongTienDiChuyen 
 {
     protected HangSanXuat hangsx;;
@@ -16,11 +38,27 @@ abstract class PhuongTienDiChuyen
         this.loaiPhuongTien = loaiPhuongTien;
         this.hangsx= hang;
     }
-    public abstract String layTenHangSanXuat(HangSanXuat hangsx);
-    public abstract void batDau();
-    public abstract void tangToc();
-    public abstract void tatMay();
-    public abstract void vanToc();
+    public  String layTenHangSanXuat()
+    {
+        return hangsx.getHangsanxuat();
+    }
+    public  void batDau()
+    {
+        System.out.println("batDau");
+    }
+    public  void tangToc()
+    {
+        System.out.println("Tang toc");
+    }
+    public  void tatMay()
+    {   
+        System.out.println("tat may");
+    }
+    public void vanToc()
+    {
+        System.out.println("van toc ");
+    }
+    public abstract double layVanToc();
 }
 class MayBay extends PhuongTienDiChuyen
 {
@@ -30,38 +68,27 @@ class MayBay extends PhuongTienDiChuyen
         // Lưu ý : super luôn phải ở đầu
         // super giúp cho mình có thể nhập tham chiếu vô luôn
         // hangsx không nhập tham chiếu vô được là do nó có kiểu "HangSanXuat"
+        // "HangSanXuat" (kiểu này do người dùng nhập vào class "HangSanXuat")
+        // Muốn tra ra tên thì dùng
+        // System.out.println(maybay.loaiPhuongTien);(do public nên làm được vậy)
         super("Maybay",hangsx);
        
         this.loaiNhienLieu = loaiNhienLieu;
     }
-    public String layTenHangSanXuat(HangSanXuat hangsx)
+    public double layVanToc()
     {
-        return hangsx.getHangsanxuat();
+        return 200;
     }
-    public  void batDau()
-    {
-
-    }
-    public  void tangToc()
-    {
-
-    }
-    public  void tatMay()
-    {
-
-    }
-    public  void vanToc()
-    {
-
-    }
+    
 }   
 class HangSanXuat
 {
     private String tenHangSanxuat;
     private String tenquocgia;
-    public HangSanXuat(String tenHangSanxuat)
+    public HangSanXuat(String tenHangSanxuat,String tenquocgia)
     {
         this.tenHangSanxuat = tenHangSanxuat;
+        this.tenquocgia = tenquocgia;
     }
     public String getHangsanxuat()
     {
@@ -84,21 +111,9 @@ class XeOto extends PhuongTienDiChuyen
     {
         return hangsx.getHangsanxuat();
     }
-    public  void batDau()
+    public double layVanToc()
     {
-
-    }
-    public  void tangToc()
-    {
-
-    }
-    public  void tatMay()
-    {
-
-    }
-    public  void vanToc()
-    {
-
+        return 20;
     }
 }   
 class Xedap extends PhuongTienDiChuyen
@@ -107,4 +122,16 @@ class Xedap extends PhuongTienDiChuyen
     {
         super("Xedap",hangsx);
     }
+    public String layTenHangSanXuat(HangSanXuat hangsx)
+    {
+        return hangsx.getHangsanxuat();
+    }
+    public double layVanToc()
+    {
+        return 10;
+    }
 }
+
+
+//------------------------------------------------------------------------------------
+// Java 46
