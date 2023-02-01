@@ -29,10 +29,17 @@ public class Main2
         Phanmemmaytinh pmmt = new Phanmemmaytinh() ;
         System.out.println(pmmt.cong(6,8));
         pmmt.sapxepgiam();
+        //------------------------------------------------------------------------------------
+        // Java 47. Hiểu rõ về Gói - Package trong lập trình Java | Phần 2 
+        // package giống như thư mục trong Java , tên gói phải ghi chữ thường
         
-        // Java 59. Kiểu dữ liệu Enum trong lập trình Java
-        // Enum là kiểu tập hợp nhiều class hữu hạn
-    }
+        
+        // Java 48. Phân biệt điều khiển public, protected, private | Phần 2
+        
+        
+    }   
+    // Java 59. Kiểu dữ liệu Enum trong lập trình Java
+    // Enum là kiểu tập hợp nhiều class hữu hạn
 }
 //------------------------------------------------------------------------------------
 // Java 45.
