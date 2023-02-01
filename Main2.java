@@ -34,6 +34,7 @@ public class Main2
         // package giống như thư mục trong Java , tên gói phải ghi chữ thường
         
         
+        //------------------------------------------------------------------------------------
         // Java 48. Phân biệt điều khiển public, protected, private | Phần 2
         
         
