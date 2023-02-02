@@ -164,7 +164,29 @@ public class Main2
         String str10 = "Xin chao cac ban ";
         System.out.println(str10.substring(4, str10.length()));
         // Lưu ý : do length là hàm của chuỗi( không phải thuộc tính như của mảng) nên là length()
-}   
+
+
+
+//------------------------------------------------------------------------------------
+        // LIST
+        // //Creating a List of type String using ArrayList  
+        // List<String> list=new ArrayList<String>();  
+        
+        // //Creating a List of type Integer using ArrayList  
+        // List<Integer> list=new ArrayList<Integer>();  
+        
+        // //Creating a List of type Book using ArrayList  
+        // List<Book> list=new ArrayList<Book>();  
+        
+        // //Creating a List of type String using LinkedList  
+        // // List<String> list=new LinkedList<String>();  
+        
+        // list.add("Mango");  
+        // list.add("Apple");  
+        // list.add("Banana");  
+        // list.add("Grapes");  
+    
+    }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
 }
