@@ -16,7 +16,7 @@ public class Main2
         // System.out.println(maybay.loaiPhuongTien);
 
 
-        //------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
         // Java 46. Hiểu rõ về INTERFACE trong lập trình Java | Phần 2
         // Sử dụng Interface là do trong java không có đa kế thừa
         // nên Interface tượng trưng cho đa kế thừa trong jvaa
@@ -32,13 +32,17 @@ public class Main2
         // Phanmemmaytinh pmmt = new Phanmemmaytinh() ;
         // System.out.println(pmmt.cong(6,8));
         // pmmt.sapxepgiam();
-        //------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
         // Java 47. Hiểu rõ về Gói - Package trong lập trình Java | Phần 2 
         // package giống như thư mục trong Java , tên gói phải ghi chữ thường
         
 
         //------------------------------------------------------------------------------------
         // Java 48. Phân biệt điều khiển public, protected, private | Phần 2
+        
+
+//------------------------------------------------------------------------------------
+        // Java 49. Xử lý chuỗi trong lập trình Java | Phần 1
         Scanner sc = new Scanner(System.in);
         // System.out.println("Nhap vao chuoi");
         // String s =sc.nextLine();
@@ -72,7 +76,9 @@ public class Main2
         // {
         //     System.out.println(i);
         // }
-
+        
+//------------------------------------------------------------------------------------
+        // Java 50. Xử lý chuỗi trong lập trình Java | Phần 2
         // Hàm equals() : so sánh 2 chuỗi ( phân biệt chữ hoa)
 
         // String s1 = "gg";
@@ -101,15 +107,29 @@ public class Main2
         // boolean ss = s1.regionMatches(false, 0, s2, 0, 1);
         // System.out.println("so sanh s1 tu 0 den 1 voi s2 : " + ss);
 
-        // Hàm startWidth : kiểm tra chuỗi bắt đầu bằng 1 chuỗi do mình quy định sẵn
-        String sdt ="012345";
-        System.out.println(sdt.startsWith("012"));
-        System.out.println(sdt.startsWith("013"));
+        // Hàm startsWith : kiểm tra chuỗi bắt đầu bằng 1 chuỗi do mình quy định sẵn
+        // String sdt ="012345";
+        // System.out.println(sdt.startsWith("012"));
+        // System.out.println(sdt.startsWith("013"));
 
-        // Hàm endWidth : kiểm tra chuỗi kết thúc bằng 1 chuỗi  do mình quy định
-        String fl = "user.c";
-        System.out.println(fl.endsWith("css"));
-    }   
+        // // Hàm endsWith : kiểm tra chuỗi kết thúc bằng 1 chuỗi  do mình quy định
+        // String fl = "user.c";
+        // System.out.println(fl.endsWith("css"));
+
+
+//------------------------------------------------------------------------------------
+        // Java 51. Xử lý chuỗi trong lập trình Java | Phần 3
+        String ss1 = "hello world";
+        String ss2 = "hello";
+        
+        // Hàm indexOf : tìm kiếm chuỗi và kí tự
+        // str1.indexOf(str2, vị trí bắt đầu tìm) : kiểm tra str2 có là con của str1 không , nếu có trả về vị trí bắt đầu
+        // nếu ra 1 giá trị âm tức là không tìm thấy str2 trong str1
+
+        System.out.println(ss1.indexOf(ss2));
+
+    
+}   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
 }
