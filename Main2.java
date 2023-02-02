@@ -155,6 +155,11 @@ public class Main2
         String str8 = str5.toUpperCase();
         System.out.println(str8);
         
+        // hàm trim : xóa khoảng tắng dư thừa 
+        String str9 = "    hello";
+        System.out.println(str9.trim());
+
+        
 
 }
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
