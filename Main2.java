@@ -44,13 +44,23 @@ public class Main2
 
         // Hàm length() : lấy độ dài
         //  ứng đụng ( đặt mật khẩu ít nhất 8 kí tự )
-        System.out.println("lengath() : " + s.length());
+        System.out.println("length() : " + s.length());
         
         // Hàm charAt( vị trí ) : lấy kí tự tại vị trí trong chuỗi
         // Ứng dụng kiểm tra số điện thoại, mật khẩu phải có chữ in hoa đầu tiên 
         for( int i = 0; i<s.length(); i++ )
         {
             System.out.println("ki tu tai vi tri " + i + " la : " + s.charAt(i));
+        }
+
+        // hàm getChars( vị trí bắt đầu, vị trí kết thúc, mảng mới , vị trí bắt đầu của mảng)
+        //  lấy các kí tự trong mảng copy vào 1 mảng mới
+        char[] a = new char[10] ;
+        s.getChars(2, 5, a, 0);
+        // length là 1 thuộc tính của mảng ( không phải hàm như ở trên)
+        for( int i = 0; i < a.length; i++ )
+        {
+            System.out.println("Gia tri cua mang tai " + i + " la : " + a[i]);
         }
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
