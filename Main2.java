@@ -143,7 +143,10 @@ public class Main2
         System.out.println("chuoi s3 duoc noi tu s1 voi s2 bang concat la : " + str3);
         System.out.println("chuoi s4 duoc noi tu s1 voi s2 bang dau ( + ) la : " + str3);
         
-        // 
+        // hàm replace
+        String str5 = "Hello world";
+        String str6 = str5.replace("Hello","chao");
+        System.out.println(str6);
 }
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
