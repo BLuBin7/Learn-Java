@@ -1,4 +1,6 @@
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main2
@@ -136,33 +138,33 @@ public class Main2
 //------------------------------------------------------------------------------------
         // Java 52. Xử lý chuỗi trong lập trình Java | Phần 4
         // hàm concat
-        String str1 = "Hello";
-        String str2 = " world!";
-        String str3 =str1.concat(str2);
-        String str4 =str1 + str2 ;
-        System.out.println("chuoi s3 duoc noi tu s1 voi s2 bang concat la : " + str3);
-        System.out.println("chuoi s4 duoc noi tu s1 voi s2 bang dau ( + ) la : " + str3);
+        // String str1 = "Hello";
+        // String str2 = " world!";
+        // String str3 =str1.concat(str2);
+        // String str4 =str1 + str2 ;
+        // System.out.println("chuoi s3 duoc noi tu s1 voi s2 bang concat la : " + str3);
+        // System.out.println("chuoi s4 duoc noi tu s1 voi s2 bang dau ( + ) la : " + str3);
         
-        // hàm replace
-        String str5 = "Hello world";
-        String str6 = str5.replace("Hello","chao");
-        System.out.println(str6);
+        // // hàm replace
+        // String str5 = "Hello world";
+        // String str6 = str5.replace("Hello","chao");
+        // System.out.println(str6);
 
-        // hàm tolLowerCase : chuyển về chữ thường
-        // hàm toUpperCase : chuyển về chữ hoa
-        String str7 = str5.toLowerCase();
-        System.out.println(str7); 
-        String str8 = str5.toUpperCase();
-        System.out.println(str8);
+        // // hàm tolLowerCase : chuyển về chữ thường
+        // // hàm toUpperCase : chuyển về chữ hoa
+        // String str7 = str5.toLowerCase();
+        // System.out.println(str7); 
+        // String str8 = str5.toUpperCase();
+        // System.out.println(str8);
         
-        // hàm trim : xóa khoảng tắng dư thừa 
-        String str9 = "    hello";
-        System.out.println(str9.trim());
+        // // hàm trim : xóa khoảng tắng dư thừa 
+        // String str9 = "    hello";
+        // System.out.println(str9.trim());
 
-        // hàm substring : cắt chuỗi
-        // substring(vị trí đầu, vị tría cuối)
-        String str10 = "Xin chao cac ban ";
-        System.out.println(str10.substring(4, str10.length()));
+        // // hàm substring : cắt chuỗi
+        // // substring(vị trí đầu, vị tría cuối)
+        // String str10 = "Xin chao cac ban ";
+        // System.out.println(str10.substring(4, str10.length()));
         // Lưu ý : do length là hàm của chuỗi( không phải thuộc tính như của mảng) nên là length()
 
 
@@ -186,6 +188,18 @@ public class Main2
         // list.add("Banana");  
         // list.add("Grapes");  
     
+     // Array.asList : cách khai báo list từ java 9 trở xuống
+    //  List<Integer>arrayaslist = Arrays.asList(1,2,3,4); //cách khai báo list từ java 9 trở xuống
+     List<String>arrayaslist = Arrays.asList("uu","66","ss","ll"); 
+    
+     //List.of() cách khai báo list trong java 9
+    //  List<Integer> arrayaslist = List.of (1,2,3,4); 
+    
+    // lệnh set : thay đổi số trong danh sách
+    arrayaslist.set(1,"ô");
+    System.out.println(arrayaslist);
+
+
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
