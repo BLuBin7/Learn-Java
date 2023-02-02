@@ -42,8 +42,16 @@ public class Main2
         System.out.println("Nhap vao chuoi");
         String s =sc.nextLine();
 
-        // Hàm length() : ứng đụng ( đặt mật khẩu ít nhất 8 kí tự )
+        // Hàm length() : lấy độ dài
+        //  ứng đụng ( đặt mật khẩu ít nhất 8 kí tự )
         System.out.println("lengath() : " + s.length());
+        
+        // Hàm charAt( vị trí ) : lấy kí tự tại vị trí trong chuỗi
+        // Ứng dụng kiểm tra số điện thoại, mật khẩu phải có chữ in hoa đầu tiên 
+        for( int i = 0; i<s.length(); i++ )
+        {
+            System.out.println("ki tu tai vi tri " + i + " la : " + s.charAt(i));
+        }
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
