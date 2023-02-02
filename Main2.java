@@ -105,6 +105,10 @@ public class Main2
         String sdt ="012345";
         System.out.println(sdt.startsWith("012"));
         System.out.println(sdt.startsWith("013"));
+
+        // Hàm endWidth : kiểm tra chuỗi kết thúc bằng 1 chuỗi  do mình quy định
+        String fl = "user.c";
+        System.out.println(fl.endsWith("css"));
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
