@@ -79,11 +79,22 @@ public class Main2
         String s1 = new String("gg");
         String s2 = "GG";
         String s3 = "gg";
-        System.out.println("s1 equals s3 " + s1.equals(s3));
-        System.out.println("s1 equals s2 " + s1.equals(s2));
+        // System.out.println("s1 equals s3 " + s1.equals(s3));
+        // System.out.println("s1 equals s2 " + s1.equals(s2));
         
-        // hàm equalsIgnoreCase : so sánh 2 chuỗi ( không phân biệt chữ hoa)
-        System.out.println("s1 equalsIgnoreCase s2 " + s1.equalsIgnoreCase(s2));
+        // // hàm equalsIgnoreCase : so sánh 2 chuỗi ( không phân biệt chữ hoa)
+        // System.out.println("s1 equalsIgnoreCase s2 " + s1.equalsIgnoreCase(s2));
+        
+        // hàm compareTo : so sánh > < =
+        // ứng dụng : dùng để sắp xếp danh sách
+        // Âm : <
+        // Dương : >
+        // Không : =
+        // str1.compareTo(str2) : str 1 có  > < = str2 không
+        System.out.println("s1 compareTo s2 : " + s1.compareTo(s2));
+        
+        //  Hàm compareToIgnoreCase : không phân biệt chữ hoa
+        System.out.println("s1 compareToIgnoreCase s2 : " + s1.compareToIgnoreCase(s2));
         
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
