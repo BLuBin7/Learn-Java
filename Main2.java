@@ -1,8 +1,9 @@
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class Main2
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws UnsupportedEncodingException
     {
         // HangSanXuat hang1 = new HangSanXuat("yamaha","Japan");
         // HangSanXuat hang2 = new HangSanXuat("ford","US");
@@ -39,29 +40,51 @@ public class Main2
         //------------------------------------------------------------------------------------
         // Java 48. Phân biệt điều khiển public, protected, private | Phần 2
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap vao chuoi");
-        String s =sc.nextLine();
+        // System.out.println("Nhap vao chuoi");
+        // String s =sc.nextLine();
 
-        // Hàm length() : lấy độ dài
-        //  ứng đụng ( đặt mật khẩu ít nhất 8 kí tự )
-        System.out.println("length() : " + s.length());
+        // // Hàm length() : lấy độ dài
+        // //  ứng đụng ( đặt mật khẩu ít nhất 8 kí tự )
+        // System.out.println("length() : " + s.length());
         
         // Hàm charAt( vị trí ) : lấy kí tự tại vị trí trong chuỗi
         // Ứng dụng kiểm tra số điện thoại, mật khẩu phải có chữ in hoa đầu tiên 
-        for( int i = 0; i<s.length(); i++ )
-        {
-            System.out.println("ki tu tai vi tri " + i + " la : " + s.charAt(i));
-        }
+        // for( int i = 0; i<s.length(); i++ )
+        // {
+        //     System.out.println("ki tu tai vi tri " + i + " la : " + s.charAt(i));
+        // }
 
-        // hàm getChars( vị trí bắt đầu, vị trí kết thúc, mảng mới , vị trí bắt đầu của mảng)
-        //  lấy các kí tự trong mảng copy vào 1 mảng mới
-        char[] a = new char[10] ;
-        s.getChars(2, 5, a, 0);
-        // length là 1 thuộc tính của mảng ( không phải hàm như ở trên)
-        for( int i = 0; i < a.length; i++ )
-        {
-            System.out.println("Gia tri cua mang tai " + i + " la : " + a[i]);
-        }
+        // // hàm getChars( vị trí bắt đầu, vị trí kết thúc, mảng mới , vị trí bắt đầu của mảng)
+        // //  lấy các kí tự trong mảng copy vào 1 mảng mới
+        // char[] a = new char[10] ;
+        // s.getChars(2, 5, a, 0);
+        // // length là 1 thuộc tính của mảng ( không phải hàm như ở trên)
+        // for( int i = 0; i < a.length; i++ )
+        // {
+        //     System.out.println("Gia tri cua mang tai " + i + " la : " + a[i]);
+        // }
+
+        // // hàm getBytes() : chuyển kí tự về bảng mã ASCII
+  
+        // byte[] b = s.getBytes("UTF-8"); //hàm b hiện là hàm có các kí tự đã được chuyển thành ASCII
+        // // byte[] b = s.getBytes("UTF-16"); 
+        // for(byte i : b)  //foreach (<kiểu kí tự> tên biến chạy : tên mảng) : nó sẽ tự chạy hết mảng
+        // {
+        //     System.out.println(i);
+        // }
+
+        // Hàm equals() : so sánh 2 chuỗi ( phân biệt chữ hoa)
+
+        // String s1 = "gg";
+        String s1 = new String("gg");
+        String s2 = "GG";
+        String s3 = "gg";
+        System.out.println("s1 equals s3 " + s1.equals(s3));
+        System.out.println("s1 equals s2 " + s1.equals(s2));
+        
+        // hàm equalsIgnoreCase : so sánh 2 chuỗi ( không phân biệt chữ hoa)
+        System.out.println("s1 equalsIgnoreCase s2 " + s1.equalsIgnoreCase(s2));
+        
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
