@@ -147,6 +147,15 @@ public class Main2
         String str5 = "Hello world";
         String str6 = str5.replace("Hello","chao");
         System.out.println(str6);
+
+        // hàm tolLowerCase : chuyển về chữ thường
+        // hàm toUpperCase : chuyển về chữ hoa
+        String str7 = str5.toLowerCase();
+        System.out.println(str7); 
+        String str8 = str5.toUpperCase();
+        System.out.println(str8);
+        
+
 }
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
