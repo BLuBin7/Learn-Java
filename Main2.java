@@ -159,9 +159,12 @@ public class Main2
         String str9 = "    hello";
         System.out.println(str9.trim());
 
-        
-
-}
+        // hàm substring : cắt chuỗi
+        // substring(vị trí đầu, vị tría cuối)
+        String str10 = "Xin chao cac ban ";
+        System.out.println(str10.substring(4, str10.length()));
+        // Lưu ý : do length là hàm của chuỗi( không phải thuộc tính như của mảng) nên là length()
+}   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
 }
