@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main2
 {
     public static void main(String[] args)
@@ -19,25 +21,29 @@ public class Main2
         // nên Interface tượng trưng cho đa kế thừa trong jvaa
         // tất cả các operation trong Interface đều là các abstract,không có tham số truyền vào chỉ có các operation
         // cách gọi của interface cũng khác vói abstract
-        // Nếu gọi ở trong hàm mà nó implements luôn thì các gọi sẽ giống như abstract
+        // Nếu gọi ở trong hàm mà nó implements luôn thì cách gọi sẽ giống như abstract
         // interface  luôn ở dạng public 
-        CasioFX500 fx500 =new CasioFX500();
-        Vinacal500 vn500 =new Vinacal500();
+        // CasioFX500 fx500 =new CasioFX500();
+        // Vinacal500 vn500 =new Vinacal500();
 
-        System.out.println(fx500.cong(4,2));
+        // System.out.println(fx500.cong(4,2));
 
-        Phanmemmaytinh pmmt = new Phanmemmaytinh() ;
-        System.out.println(pmmt.cong(6,8));
-        pmmt.sapxepgiam();
+        // Phanmemmaytinh pmmt = new Phanmemmaytinh() ;
+        // System.out.println(pmmt.cong(6,8));
+        // pmmt.sapxepgiam();
         //------------------------------------------------------------------------------------
         // Java 47. Hiểu rõ về Gói - Package trong lập trình Java | Phần 2 
         // package giống như thư mục trong Java , tên gói phải ghi chữ thường
         
-        
+
         //------------------------------------------------------------------------------------
         // Java 48. Phân biệt điều khiển public, protected, private | Phần 2
-        
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap vao chuoi");
+        String s =sc.nextLine();
+
+        // Hàm length()
+        System.out.println("lengath() : " + s.length());
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
