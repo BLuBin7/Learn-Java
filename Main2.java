@@ -42,7 +42,7 @@ public class Main2
         System.out.println("Nhap vao chuoi");
         String s =sc.nextLine();
 
-        // Hàm length()
+        // Hàm length() : ứng đụng ( đặt mật khẩu ít nhất 8 kí tự )
         System.out.println("lengath() : " + s.length());
     }   
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
