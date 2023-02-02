@@ -119,17 +119,32 @@ public class Main2
 
 //------------------------------------------------------------------------------------
         // Java 51. Xử lý chuỗi trong lập trình Java | Phần 3
-        String ss1 = "hello world";
-        String ss2 = "hello";
+        // String ss1 = "hello world";
+        // String ss2 = "hello";
+        // String ss3 = "Hi";
+        // // Hàm indexOf : tìm kiếm chuỗi và kí tự
+        // // str1.indexOf(str2, vị trí bắt đầu tìm) : kiểm tra str2 có là con của str1 không , nếu có trả về vị trí bắt đầu
+        // // nếu ra 1 giá trị âm tức là không tìm thấy str2 trong str1
+
+        // System.out.println(ss1.indexOf(ss2));
         
-        // Hàm indexOf : tìm kiếm chuỗi và kí tự
-        // str1.indexOf(str2, vị trí bắt đầu tìm) : kiểm tra str2 có là con của str1 không , nếu có trả về vị trí bắt đầu
-        // nếu ra 1 giá trị âm tức là không tìm thấy str2 trong str1
-
-        System.out.println(ss1.indexOf(ss2));
-
+        // // Hàm lastIndexOf : tìm kiếm từ phải sang trái
+        // // str1.lastIndexOf(str2, vị trí bắt đầu)
+        // System.out.println(ss1.lastIndexOf(ss3,1));
     
-}   
+
+//------------------------------------------------------------------------------------
+        // Java 52. Xử lý chuỗi trong lập trình Java | Phần 4
+        // hàm concat
+        String str1 = "Hello";
+        String str2 = " world!";
+        String str3 =str1.concat(str2);
+        String str4 =str1 + str2 ;
+        System.out.println("chuoi s3 duoc noi tu s1 voi s2 bang concat la : " + str3);
+        System.out.println("chuoi s4 duoc noi tu s1 voi s2 bang dau ( + ) la : " + str3);
+        
+        // 
+}
     // Java 59. Kiểu dữ liệu Enum trong lập trình Java
     // Enum là kiểu tập hợp nhiều class hữu hạn
 }
