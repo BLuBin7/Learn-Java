@@ -64,7 +64,7 @@ public class Main2
         // //  lấy các kí tự trong mảng copy vào 1 mảng mới
         // char[] a = new char[10] ;
         // s.getChars(2, 5, a, 0);
-        // // length là 1 thuộc tính của mảng ( không phải hàm như ở trên)
+// // length là 1 thuộc tính của mảng ( không phải hàm như ở trên)
         // for( int i = 0; i < a.length; i++ )
         // {
         //     System.out.println("Gia tri cua mang tai " + i + " la : " + a[i]);
@@ -187,7 +187,7 @@ public class Main2
         // list.add("Apple");  
         // list.add("Banana");  
         // list.add("Grapes");  
-    
+        
      // Array.asList : cách khai báo list từ java 9 trở xuống
     //  List<Integer>arrayaslist = Arrays.asList(1,2,3,4); //cách khai báo list từ java 9 trở xuống
      List<String>arrayaslist = Arrays.asList("uu","66","ss","ll"); 
